@@ -267,7 +267,7 @@
                          "💬 Шешімі: " + status;
 
             const encodedText = encodeURIComponent(text);
-            const whatsappUrl = "https://api.whatsapp.com/send?phone=" + phone + "&text=" + encodedText;
+            const whatsappUrl = "https://wa.me/" + phone + "?text=" + encodedText;
 
             // Телефонда және ноутбукта бірдей жұмыс істеу үшін
             window.location.href = whatsappUrl;
@@ -275,3 +275,4 @@
     </script>
 </body>
 </html>
+
