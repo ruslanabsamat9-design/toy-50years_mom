@@ -4,208 +4,278 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Шұғыла анамыздың 50 жас мерейтойы</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700;1,900&display=swap" rel="stylesheet">
     
     <style>
-        body {
-           background-image: url('фон.png');
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Тікелей өрнекті фон */
+        .main-container {
+            /* Осы сілтеме арқылы фон бәріне көрінеді */
+            background-image: url('https://i.ibb.co/v4m8YmP/background-qazaq.jpg'); 
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
-            margin: 0;
-            padding: 20px;
+            background-repeat: no-repeat;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            font-family: 'Montserrat', sans-serif;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
-        .invitation-card {
-            background: rgba(255, 255, 255, 0.97);
-            max-width: 480px;
+        /* Мәтінге арналған мөлдір контейнер */
+        .invitation-content {
+            background: rgba(255, 255, 255, 0.88); /* Сәл мөлдір ақ қабат */
+            max-width: 450px;
             width: 100%;
-            padding: 40px 30px;
+            padding: 50px 30px;
             text-align: center;
-            border: 2px solid #d4af37;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-            border-radius: 8px;
+            border: 2px solid #d4af37; /* Алтын жиек */
+            border-radius: 20px; /* Көмкерілген бұрыштар */
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            box-sizing: border-box;
+            position: relative;
         }
 
-        .script-font {
+        /* Көркем шрифт стильдері */
+        .script-text {
             font-family: 'Great Vibes', cursive;
-            color: #b8860b;
-            font-size: clamp(45px, 10vw, 65px);
+            color: #b8860b; /* Алтын түс */
+            font-size: clamp(50px, 12vw, 70px);
             margin: 10px 0;
+            font-weight: 400;
         }
 
-        .main-font {
+        .main-text {
+            font-family: 'Montserrat', sans-serif;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 12px;
-            color: #666;
+            letter-spacing: 4px;
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 25px;
         }
 
         .title-50 {
             font-family: 'Playfair Display', serif;
-            font-size: 28px;
-            color: #1a2a6c;
+            font-size: clamp(26px, 6vw, 34px);
+            color: #1a2a6c; /* Қою көк */
             font-style: italic;
-            margin-bottom: 20px;
-        }
-
-        .divider {
-            width: 50%;
-            height: 1px;
-            background: #d4af37;
-            margin: 20px auto;
+            font-weight: 900;
+            margin-bottom: 30px;
         }
 
         .intro-text {
-            font-size: 15px;
-            line-height: 1.6;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            line-height: 1.8;
             color: #333;
-            margin-bottom: 20px;
+            margin-bottom: 35px;
+            font-weight: 500;
+        }
+
+        .divider {
+            width: 60%;
+            height: 1px;
+            background: #d4af37;
+            margin: 25px auto;
+        }
+
+        /* Күнтізбе стилі */
+        .calendar-section {
+            font-family: 'Montserrat', sans-serif;
+            margin: 30px 0;
         }
 
         .calendar-table {
             width: 100%;
             border-collapse: collapse;
             font-size: 14px;
-            margin: 15px 0;
         }
 
-        .calendar-table th { color: #b8860b; padding-bottom: 8px; }
-        
+        .calendar-table th {
+            color: #b8860b;
+            padding-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .calendar-table td {
+            padding: 10px 0;
+            color: #333;
+        }
+
         .highlight {
             background-color: #b8860b;
             color: white;
             border-radius: 50%;
             display: inline-block;
-            width: 28px;
-            height: 28px;
-            line-height: 28px;
-            font-weight: 600;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            font-weight: 700;
         }
 
         .time-box {
-            font-size: 18px;
-            letter-spacing: 3px;
+            font-size: 19px;
+            letter-spacing: 5px;
             color: #1a2a6c;
             border-top: 1px solid #eee;
             border-bottom: 1px solid #eee;
-            padding: 10px 0;
-            margin: 15px 0;
+            padding: 12px 0;
+            margin: 25px 0;
             font-weight: 600;
+        }
+
+        .location-box {
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 45px;
+            font-weight: 500;
         }
 
         .location-box strong {
             display: block;
-            font-size: 18px;
+            font-size: 22px;
             color: #1a2a6c;
-            margin-top: 5px;
+            margin: 8px 0;
+            font-weight: 700;
         }
 
+        /* RSVP Формасы */
         .rsvp-section {
-            background: #fdfaf5;
-            padding: 20px;
-            margin-top: 25px;
-            border-radius: 5px;
+            background: rgba(26, 42, 108, 0.05); /* Көкшіл мөлдір фон */
+            padding: 30px;
+            border-radius: 10px;
+            text-align: left;
+            font-family: 'Montserrat', sans-serif;
         }
 
-        .rsvp-section input {
+        .rsvp-section input[type="text"] {
             width: 100%;
-            padding: 12px;
-            margin-bottom: 10px;
+            padding: 14px;
+            margin: 12px 0 25px 0;
             border: 1px solid #ddd;
-            border-radius: 4px;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
             box-sizing: border-box;
+            font-size: 15px;
         }
 
         .submit-btn {
-            background: #1a2a6c;
+            background: #1a2a6c; /* Қою көк */
             color: white;
             border: none;
             width: 100%;
-            padding: 12px;
+            padding: 16px;
             text-transform: uppercase;
+            letter-spacing: 3px;
             cursor: pointer;
-            font-weight: 600;
-            transition: 0.3s;
+            transition: 0.4s;
+            font-weight: 700;
+            border-radius: 8px;
+            font-size: 15px;
         }
 
-        .submit-btn:hover { background: #b8860b; }
+        .submit-btn:hover {
+            background: #b8860b; /* Алтын */
+        }
 
+        /* Соңғы сөздер */
         .closing-text {
             font-family: 'Great Vibes', cursive;
-            font-size: 30px;
+            font-size: 34px;
             color: #1a2a6c;
-            margin-top: 30px;
+            margin-top: 50px;
+            line-height: 1.2;
         }
 
         .family-footer {
-            font-weight: 600;
-            font-size: 14px;
-            margin-top: 15px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 17px;
+            margin-top: 25px;
             color: #b8860b;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
 
-<div class="invitation-card">
-    <p class="main-font">Тойға шақыру</p>
-    <div class="script-font">Шұғыла</div>
-    <p class="title-50">50 жас мерейтойы</p>
+<div class="main-container">
+    <div class="invitation-content">
+        <p class="main-text">Тойға шақыру</p>
+        <div class="script-text">Шұғыла</div>
+        <p class="title-50">50 жас мерейтойы</p>
 
-    <div class="divider"></div>
+        <div class="divider"></div>
 
-    <p class="intro-text">
-        Анамыз Шұғыланың 50 жас мерейтойының<br>
-        қадірлі қонағы болыңыздар!
-    </p>
-
-    <div class="calendar-section">
-        <table class="calendar-table">
-            <thead>
-                <tr>
-                    <th>ДС</th> <th>СС</th> <th>СР</th> <th>БС</th> <th>ЖМ</th> <th>СБ</th> <th>ЖС</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
-                <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
-                <tr><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
-                <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td class="highlight">21</td><td>22</td></tr>
-                <tr><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td></tr>
-                <tr><td>30</td><td>31</td><td></td><td></td><td></td><td></td><td></td></tr>
-            </tbody>
-        </table>
-        <div class="time-box">21.03.2026 • 19:00</div>
-    </div>
-
-    <div class="location-box">
         <p class="intro-text">
-            Шаян ауылы,<br>
-            <strong>«ҚАНАҒАТ» тойханасы</strong>
+            Ақ тілекпен, ақ ниетпен арнайы шақырамыз!<br>
+            Ардақты анамыздың ақ дастарханынан дәм татып, қуанышына ортақ болыңыздар.
         </p>
-    </div>
 
-    <div class="rsvp-section">
-        <form>
-            <input type="text" placeholder="Есіміңізді жазыңыз..." required>
-            <button type="submit" class="submit-btn">Растау</button>
-        </form>
-    </div>
+        <div class="calendar-section">
+            <p class="main-text" style="color:#b8860b; margin-bottom: 5px;">21 Наурыз • 2026 жыл</p>
+            <table class="calendar-table">
+                <thead>
+                    <tr>
+                        <th>ДС</th> <th>СС</th> <th>СР</th> <th>БС</th> <th>ЖМ</th> <th>СБ</th> <th>ЖС</th>
+                    </tr>
+                </thead>
+                <tbody style="text-align: center;">
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
+                    <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+                    <tr><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
+                    <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td class="highlight">21</td><td>22</td></tr>
+                    <tr><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td></tr>
+                    <tr><td>30</td><td>31</td><td></td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+            <div class="time-box">САҒАТ 19:00</div>
+        </div>
 
-    <div class="closing-text">
-        Келіңіздер, тойымыздың қонағы болыңыздар!
-    </div>
+        <div class="location-box">
+            <p class="main-text" style="margin-bottom: 5px;">Мекен-жайымыз:</p>
+            <p class="intro-text" style="margin-bottom: 0;">
+                Шаян ауылы,<br>
+                <strong>«ҚАНАҒАТ» тойханасы</strong>
+            </p>
+        </div>
 
-    <p class="family-footer">Альжановтар әулеті</p>
+        <div class="rsvp-section">
+            <form onsubmit="event.preventDefault(); sendWhatsApp();">
+                <label class="main-text" style="font-size: 11px; color: #1a2a6c;">Есіміңізді жазыңыз:</label>
+                <input type="text" id="guestName" placeholder="Аты-жөніңіз..." required>
+                <button type="submit" class="submit-btn">Растау</button>
+            </form>
+        </div>
+
+        <div class="closing-text">
+            Келіңіздер, тойымыздың қадірлі қонағы болыңыздар!
+        </div>
+
+        <p class="family-footer">Альжановтар әулеті</p>
+    </div>
 </div>
+
+<script>
+    function sendWhatsApp() {
+        const name = document.getElementById('guestName').value;
+        if(name.trim() === "") {
+            alert("Өтініш, есіміңізді жазыңыз");
+            return;
+        }
+        const phoneNumber = "77074706599"; // Өз нөміріңізді жазыңыз (7-ден бастап)
+        const text = `Сәлеметсіз бе! Шұғыла анамыздың тойына келетінімді растаймын. Құрметпен, ${name}`;
+        window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`, '_blank');
+    }
+</script>
 
 </body>
 </html>
-
