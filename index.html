@@ -1,530 +1,321 @@
 <!DOCTYPE html>
 <html lang="kk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Шұғыла Анамыздың 50 жас мерейтойы</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-
-:root{
---gold:#caa74a;
---lightgold:#f4e7c5;
---bg:#ffffff;
-}
-
-body{
-  <audio autoplay loop>
-<source src="music(2).mp3" type="audio/mpeg">
-</audio>
-margin:0;
-background:var(--bg);
-font-family:"Cormorant Garamond",serif;
-color:#444;
-}
-
-/* HERO */
-
-.hero{
-
-height:90vh;
-
-background:
-linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.9)),
-url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622");
-
-background-size:cover;
-background-position:center;
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-
-text-align:center;
-padding:20px;
-
-}
-
-.age{
-
-border:1px solid var(--gold);
-padding:8px 30px;
-border-radius:40px;
-color:var(--gold);
-font-family:Montserrat;
-letter-spacing:2px;
-font-size:13px;
-
-}
-
-.hero h1{
-font-family:"Great Vibes", cursive;
-font-size:90px;
-color:var(--gold);
-letter-spacing:2px;
-}
-
-.hero p{
-font-family:"Playfair Display", serif;
-font-size:26px;
-font-style:italic;
-color:#666;
-}
-
-/* TIMER */
-
-.timer{
-
-display:flex;
-
-gap:15px;
-
-margin-top:25px;
-
-}
-
-.time{
-
-border:1px solid var(--lightgold);
-
-padding:15px;
-
-border-radius:10px;
-
-background:white;
-
-min-width:80px;
-
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
-
-}
-
-.time span{
-
-display:block;
-
-font-size:28px;
-
-color:var(--gold);
-
-font-weight:700;
-
-}
-
-/* CARD */
-
-.card{
-
-max-width:700px;
-
-margin:-70px auto 40px;
-
-background:white;
-
-padding:50px 35px;
-
-border-radius:18px;
-
-box-shadow:0 20px 40px rgba(0,0,0,0.08);
-
-text-align:center;
-
-position:relative;
-
-}
-
-/* GOLD FRAME */
-
-.card:before{
-
-content:"";
-
-position:absolute;
-
-top:15px;
-
-left:15px;
-
-right:15px;
-
-bottom:15px;
-
-border:1px solid var(--gold);
-
-border-radius:12px;
-
-pointer-events:none;
-
-}
-
-/* TITLE */
-
-.card h2{
-font-family:"Playfair Display", serif;
-font-size:38px;
-letter-spacing:1px;
-color:var(--gold);
-}
-
-/* DIVIDER */
-
-.divider{
-
-width:90px;
-
-height:2px;
-
-background:var(--gold);
-
-margin:25px auto;
-
-}
-
-/* INFO */
-
-.info{
-
-margin:20px 0;
-
-font-size:20px;
-
-}
-
-.info strong{
-
-display:block;
-
-font-family:Montserrat;
-
-font-size:12px;
-
-letter-spacing:2px;
-
-color:var(--gold);
-
-margin-bottom:6px;
-
-}
-
-/* MAP */
-
-.map{
-
-display:inline-block;
-
-background:var(--gold);
-
-color:white;
-
-padding:12px 20px;
-
-border-radius:8px;
-
-text-decoration:none;
-
-font-family:Montserrat;
-
-margin-top:15px;
-
-}
-
-/* RSVP */
-
-.rsvp{
-
-margin-top:30px;
-
-background:#faf9f6;
-
-padding:30px;
-
-border-radius:12px;
-
-border:1px solid #eee;
-
-}
-
-.rsvp h3{
-
-font-family:"Montserrat", sans-serif;
-
-font-size:28px;
-
-color:var(--gold);
-
-margin-top:0;
-
-}
-
-input{
-
-width:100%;
-
-padding:12px;
-
-margin:12px 0 20px;
-
-border-radius:8px;
-
-border:1px solid #ddd;
-
-font-family:Montserrat;
-
-}
-
-/* BUTTONS */
-
-.buttons{
-
-display:flex;
-
-flex-direction:column;
-
-gap:10px;
-
-}
-
-.btn{
-
-padding:14px;
-
-border-radius:8px;
-
-border:1px solid var(--gold);
-
-background:white;
-
-color:var(--gold);
-
-font-family:Montserrat;
-
-font-weight:600;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-.btn:hover{
-
-background:var(--gold);
-
-color:white;
-
-}
-
-/* FOOTER */
-
-footer{
-
-text-align:center;
-
-padding:40px;
-
-font-family:Montserrat;
-
-font-size:13px;
-
-color:#999;
-
-}
-
-/* MOBILE */
-
-@media(max-width:480px){
-
-.hero h1{
-
-font-size:55px;
-
-}
-
-.hero p{
-
-font-size:24px;
-
-}
-
-.card{
-
-width:90%;
-
-}
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шұғыла Анамыздың 50 жас мерейтойы</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #caa74a;
+            --lightgold: #f4e7c5;
+            --bg: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            font-family: "Cormorant Garamond", serif;
+            color: #444;
+            overflow-x: hidden;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.8)),
+                        url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .age {
+            border: 1px solid var(--gold);
+            padding: 8px 30px;
+            border-radius: 40px;
+            color: var(--gold);
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 2px;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: "Great Vibes", cursive;
+            font-size: clamp(60px, 10vw, 90px);
+            color: var(--gold);
+            margin: 10px 0;
+        }
+
+        .hero p {
+            font-family: "Playfair Display", serif;
+            font-size: 24px;
+            font-style: italic;
+            color: #666;
+        }
+
+        /* TIMER */
+        .timer {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .time {
+            border: 1px solid var(--lightgold);
+            padding: 15px;
+            border-radius: 10px;
+            background: white;
+            min-width: 70px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .time span {
+            display: block;
+            font-size: 28px;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        /* CARD */
+        .card {
+            max-width: 600px;
+            margin: -70px auto 40px;
+            background: white;
+            padding: 50px 35px;
+            border-radius: 18px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .card:before {
+            content: "";
+            position: absolute;
+            top: 15px; left: 15px; right: 15px; bottom: 15px;
+            border: 1px solid var(--gold);
+            border-radius: 12px;
+            pointer-events: none;
+        }
+
+        .card h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 32px;
+            color: var(--gold);
+        }
+
+        .divider {
+            width: 80px;
+            height: 1px;
+            background: var(--gold);
+            margin: 25px auto;
+        }
+
+        .info {
+            margin: 20px 0;
+            font-size: 20px;
+        }
+
+        .info strong {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: var(--gold);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .map {
+            display: inline-block;
+            background: var(--gold);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        /* RSVP */
+        .rsvp {
+            margin-top: 40px;
+            background: #faf9f6;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px solid var(--gold);
+            background: white;
+            color: var(--gold);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: var(--gold);
+            color: white;
+        }
+
+        /* MUSIC BUTTON */
+        #musicToggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--gold);
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media(max-width:480px){
+            .hero h1 { font-size: 55px; }
+            .card { width: 85%; padding: 40px 20px; }
+        }
+    </style>
 </head>
-
 <body>
-  <audio id="bgmusic" autoplay loop>
-  <source src="music(2).mp3" type="audio/mpeg">
+
+<audio id="bgMusic" loop>
+    <source src="music(2).mp3" type="audio/mpeg">
 </audio>
+
+<button id="musicToggle" onclick="toggleMusic()">🎵</button>
 
 <section class="hero">
+    <div class="age">50 ЖАС МЕРЕЙТОЙ</div>
+    <h1>Шұғыла</h1>
+    <p>Аяулы анамыздың мерейлі мерекесі</p>
 
-<div class="age">50 ЖАС МЕРЕЙТОЙ</div>
-
-<h1>Шұғыла</h1>
-
-<p>Аяулы анамыздың мерейлі мерекесіне шақырамыз</p>
-
-<div class="timer">
-
-<div class="time">
-<span id="days">00</span>
-күн
-</div>
-
-<div class="time">
-<span id="hours">00</span>
-сағат
-</div>
-
-<div class="time">
-<span id="minutes">00</span>
-мин
-</div>
-
-</div>
-
+    <div class="timer">
+        <div class="time"><span id="days">00</span>күн</div>
+        <div class="time"><span id="hours">00</span>сағат</div>
+        <div class="time"><span id="minutes">00</span>мин</div>
+    </div>
 </section>
 
 <div class="card">
+    <h2>Құрметті қонақтар!</h2>
+    <p style="font-size:18px; line-height: 1.6;">
+        Әулетіміздің берекесі, асыл анамыз<br>
+        <strong style="font-size: 24px; color: var(--gold);">Шұғыланың</strong><br>
+        50 жас мерейтойының қадірлі қонағы болуға шақырамыз!
+    </p>
 
-<h2>Құрметті қонақтар!</h2>
+    <div class="divider"></div>
 
-<p style="font-size:20px">
+    <div class="info">
+        <strong>Күні мен уақыты</strong>
+        21 Наурыз 2026 | 19:00
+    </div>
 
-Әулетіміздің берекесі, асыл анамыз
+    <div class="info">
+        <strong>Мекенжайы</strong>
+        Шаян ауылы — Қанағат тойханасы
+    </div>
 
-<strong>Шұғыланың</strong>
+    <a class="map" href="https://www.google.com/maps" target="_blank">📍 Картадан көру</a>
 
-50 жас мерейтойының
+    <div class="rsvp">
+        <h3 style="font-family: Montserrat; color: var(--gold);">Жауабыңызды күтеміз</h3>
+        <input type="text" id="guestName" placeholder="Аты-жөніңіз">
+        
+        <button class="btn" onclick="sendWhatsApp('Өзім барамын')">Өзім барамын</button>
+        <button class="btn" onclick="sendWhatsApp('Жұбайыммен бірге барамын')">Жұбайыммен бірге</button>
+        <button class="btn" onclick="sendWhatsApp('Келе алмаймын')">Келе алмаймын</button>
+    </div>
 
-қадірлі қонағы болуға шақырамыз
-
-</p>
-
-<div class="divider"></div>
-
-<div class="info">
-
-<strong>Күні мен уақыты</strong>
-
-21 Наурыз 2026 | 19:00
-
+    <p style="margin-top:40px; font-style:italic;">Альжановтар әулеті</p>
 </div>
-
-<div class="info">
-
-<strong>Мекенжайы</strong>
-
-Шаян ауылы — Қанағат тойханасы
-
-</div>
-
-<a class="map" href="https://maps.google.com/?q=Қанағат+тойханасы+Шаян" target="_blank">
-
-📍 Картадан көру
-
-</a>
-
-<div class="rsvp">
-
-<h3>Жауабыңызды күтеміз</h3>
-
-<input id="name" placeholder="Аты-жөніңіз">
-
-<div class="buttons">
-
-<button class="btn" onclick="send('Өзім барамын')">
-Өзім барамын
-</button>
-
-<button class="btn" onclick="send('Жұбайыммен бірге барамын')">
-Жұбайыммен бірге барамын
-</button>
-
-<button class="btn" onclick="send('Келе алмаймын')">
-Келе алмаймын
-</button>
-
-</div>
-
-</div>
-
-<p style="margin-top:30px;font-style:italic;font-size:20px">
-
-Альжановтар әулеті
-
-</p>
-  <p style="margin-top:30px;font-style:italic;font-size:20px">
-
-Тойымыздың қадірлі қонағы болыңыздар!
-
-</p>
-
-</div>
-
-
 
 <script>
+    // ТАЙМЕР
+    const targetDate = new Date("March 21, 2026 19:00:00").getTime();
 
-const date=new Date("Mar 21, 2026 19:00:00").getTime()
+    setInterval(() => {
+        const now = new Date().getTime();
+        const diff = targetDate - now;
 
-setInterval(()=>{
+        if (diff > 0) {
+            document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+            document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("minutes").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        }
+    }, 1000);
 
-const now=new Date().getTime()
+    // МУЗЫКА ФУНКЦИЯЛАРЫ
+    const music = document.getElementById("bgMusic");
+    const musicBtn = document.getElementById("musicToggle");
 
-const diff=date-now
+    function toggleMusic() {
+        if (music.paused) {
+            music.play();
+            musicBtn.innerText = "⏸️";
+        } else {
+            music.pause();
+            musicBtn.innerText = "🎵";
+        }
+    }
 
-if(diff<0)return
+    // Экранды бірінші рет басқанда музыканы қосу (Браузер шектеуі үшін)
+    document.addEventListener('click', () => {
+        if (music.paused) {
+            music.play();
+            musicBtn.innerText = "⏸️";
+        }
+    }, { once: true });
 
-document.getElementById("days").innerText=Math.floor(diff/(1000*60*60*24))
+    // WHATSAPP ЖІБЕРУ
+    function sendWhatsApp(status) {
+        const name = document.getElementById("guestName").value;
+        const phone = "77773491537";
 
-document.getElementById("hours").innerText=Math.floor((diff%(1000*60*60*24))/(1000*60*60))
+        if (!name) {
+            alert("Өтініш, аты-жөніңізді жазыңыз");
+            return;
+        }
 
-document.getElementById("minutes").innerText=Math.floor((diff%(1000*60*60))/(1000*60))
-
-},1000)
-
-function send(status){
-
-const name=document.getElementById("name").value
-
-const phone="77773491537"
-
-if(!name){
-
-alert("Атыңызды жазыңыз")
-
-return
-
-}
-
-const text=
-
-"Сәлеметсіз бе! Шұғыла анамыздың тойына жауап:\n\n"+
-
-"Аты: "+name+"\n"+
-
-"Жауап: "+status
-
-window.location.href="https://wa.me/"+phone+"?text="+encodeURIComponent(text)
-
-}
-
+        const message = `Сәлеметсіз бе! Шұғыла анамыздың тойына жауап:\n\nАты: ${name}\nЖауап: ${status}`;
+        const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+    }
 </script>
 
 </body>
 </html>
-
-
-
-
-
