@@ -8,7 +8,7 @@
     
     <style>
         body {
-            /* Сіз көрсеткен Пинтерест стиліндегі фон */
+            /* Pinterest стиліндегі гүлді фон */
             background-image: url('https://i.pinimg.com/originals/32/7b/95/327b9525f3898869c9b910e9f0238e74.jpg'); 
             background-size: cover;
             background-position: center;
@@ -22,8 +22,7 @@
         }
 
         .invitation-card {
-            /* Картаның фонын сәл мөлдір (0.95) қылдым, сонда артқы фонмен әдемі үйлеседі */
-            background: rgba(255, 255, 255, 0.96);
+            background: rgba(255, 255, 255, 0.97);
             max-width: 480px;
             width: 100%;
             padding: 50px 35px;
@@ -116,3 +115,62 @@
 
         .rsvp-section {
             background: #fdfaf5;
+            padding: 25px;
+            border-radius: 4px;
+            margin-top: 30px;
+        }
+
+        .submit-btn {
+            background: #1a2a6c;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #b8860b;
+        }
+
+        .closing-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 34px;
+            color: #1a2a6c;
+            margin-top: 35px;
+            line-height: 1.1;
+        }
+
+        .family-footer {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            margin-top: 20px;
+            color: #b8860b;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<div class="invitation-card">
+    <p class="main-font">Тойға шақыру</p>
+    <div class="script-font">Шұғыла</div>
+    <p class="title-50">50 жас мерейтойы</p>
+
+    <div class="divider"></div>
+
+    <p class="intro-text">
+        Ақ тілекпен, ақ ниетпен арнайы шақырамыз!<br>
+        Ардақты анамыздың ақ дастарханынан дәм татып, қуанышына ортақ болыңыздар.
+    </p>
+
+    <div class="calendar-section">
+        <table class="calendar-table">
+            <thead>
+                <tr>
