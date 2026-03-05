@@ -2,443 +2,133 @@
 <html lang="kk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Шұғыла Анамыздың 50 жас мерейтойы</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:italic,wght@0,700;1,700&display=swap" rel="stylesheet">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шұғыла 50 жас | Мерейтой</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:italic,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
-        :root {
-            --gold: #c5a059; /* Негізгі алтын түс */
-            --dark-gold: #8e6d2d; /* Көлеңкелі алтын */
-            --text: #333; /* Негізгі мәтін */
-            --bg: #fcfbf7; /* Жылы ақ фон */
-            --white: #ffffff;
-        }
-
         body {
             margin: 0;
+            padding: 0;
             font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
+            /* Скриншоттағыдай алтын ұшқындары бар ақ фон */
+            background-color: #ffffff;
+            background-image: url('https://www.transparenttextures.com/patterns/white-diamond.png'), 
+                              url('https://img.freepik.com/free-vector/luxury-white-background-with-golden-glitter_23-2148823133.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #1d3557;
+            text-align: center;
         }
 
-        /* Бірінші экран (Hero Section) */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
-                        url('https://images.unsplash.com/photo-1517013327681-37d45749f71c?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            color: var(--white);
-            text-align: center;
-            padding: 20px;
-            position: relative;
+            background: rgba(255, 255, 255, 0.8); /* Мәтін жақсы оқылуы үшін */
         }
 
-        /* Фонға әдемі гүлді өрнек қосқыңыз келсе */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url('https://www.transparenttextures.com/patterns/floral-paper.png');
-            opacity: 0.1;
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            font-weight: 700;
-            margin: 10px 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            font-weight: 300;
-            letter-spacing: 1px;
-            margin-top: 0;
-            max-width: 600px;
-        }
-
-        .age-badge {
-            font-size: 1rem;
-            font-weight: 600;
-            border: 2px solid var(--gold);
-            padding: 8px 30px;
-            border-radius: 50px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 25px;
-            background: rgba(197, 160, 89, 0.1);
-        }
-
-        /* Кері санақ (Timer) дизайны */
-        .timer {
-            display: flex;
-            gap: 15px;
-            margin-top: 40px;
-        }
-
-        .time-item {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 15px;
-            border-radius: 12px;
-            min-width: 80px;
-            border: 1px solid rgba(255,255,255,0.2);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .time-item span {
-            display: block;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--gold);
-        }
-
-        .time-item label {
-            font-size: 0.8rem;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 5px;
-            display: block;
-        }
-
-        /* Шақыру картасы (Main Content) */
-        .invitation-card {
-            max-width: 650px;
-            margin: -80px auto 60px;
-            background: var(--white);
-            padding: 50px 30px;
-            border-radius: 25px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-            text-align: center;
-            position: relative;
-            z-index: 10;
-            border: 1px solid rgba(197, 160, 89, 0.1);
-        }
-
-        /* Картаның бұрыштарындағы өрнектер */
-        .invitation-card::before, .invitation-card::after {
-            content: '';
-            position: absolute;
-            width: 80px; height: 80px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            opacity: 0.2;
-        }
-        .invitation-card::before { top: 20px; left: 20px; background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Decorative_corner_gold_01.svg/128px-Decorative_corner_gold_01.svg.png'); }
-        .invitation-card::after { bottom: 20px; right: 20px; background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Decorative_corner_gold_01.svg/128px-Decorative_corner_gold_01.svg.png'); transform: rotate(180deg); }
-
-        .invitation-card h2 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 3.2rem;
-            color: var(--gold);
-            margin-bottom: 25px;
-            margin-top: 0;
-        }
-
-        .invitation-card p {
-            font-size: 1.1rem;
-            font-weight: 400;
-            color: #555;
-            max-width: 500px;
-            margin: 0 auto 30px;
-        }
-
-        .divider {
-            width: 100px;
-            height: 2px;
-            background: linear-gradient(to right, transparent, var(--gold), transparent);
-            margin: 35px auto;
-        }
-
-        /* Толық ақпарат (Info Row) */
-        .info-row {
-            margin: 25px 0;
-            padding: 0 20px;
-        }
-
-        .info-row strong {
-            display: block;
-            color: var(--dark-gold);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .info-row span {
-            font-size: 1.1rem;
-            font-weight: 400;
-            color: #444;
-        }
-
-        /* Карта батырмасы */
-        .btn-map { 
-            display: inline-block;
-            background: var(--gold);
-            color: var(--white);
-            text-decoration: none;
-            padding: 14px 40px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1rem;
-            margin-top: 25px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(197, 160, 143, 0.3);
-        }
-
-        .btn-map:hover {
-            background: var(--dark-gold);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(197, 160, 143, 0.4);
-        }
-
-        /* RSVP Форма дизайны */
-        .rsvp-form {
-            background: #fdfaf4;
-            padding: 35px;
-            border-radius: 20px;
-            margin-top: 40px;
-            border: 1px solid rgba(197, 160, 89, 0.1);
-        }
-
-        .rsvp-form h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            color: var(--dark-gold);
-            margin-top: 0;
-            margin-bottom: 25px;
-        }
-
-        .rsvp-form form {
-            text-align: left;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        .rsvp-form label {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-            display: block;
-        }
-
-        .rsvp-form input, .rsvp-form select {
-            width: 100%;
-            padding: 15px;
+        .header-img {
+            width: 80px;
             margin-bottom: 20px;
-            border: 1px solid #e0e0e0;
-            border-radius: 10px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            background: var(--white);
-            box-sizing: border-box;
-            transition: border-color 0.3s ease;
         }
 
-        .rsvp-form input:focus, .rsvp-form select:focus {
-            border-color: var(--gold);
-            outline: none;
+        .top-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .main-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin: 10px 0;
+            border-top: 1px solid #d4af37;
+            border-bottom: 1px solid #d4af37;
+            padding: 10px 0;
+        }
+
+        .invite-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #d4af37;
+            margin-top: 40px;
+            font-weight: 600;
+        }
+
+        .details {
+            margin: 30px 0;
+            font-size: 1.1rem;
+            line-height: 2;
         }
 
         .btn-submit {
-            width: 100%;
-            padding: 16px;
-            border: none;
-            border-radius: 10px;
-            color: var(--white);
-            background: #28a745; /* Жасыл түс - сәттілік символы */
-            font-weight: 600;
+            display: inline-block;
+            background-color: #1d3557;
+            color: white;
+            padding: 15px 60px;
+            text-decoration: none;
+            border-radius: 50px;
             font-size: 1.1rem;
-            cursor: pointer;
-            transition: background 0.3s ease;
-            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+            margin-top: 20px;
+            transition: 0.3s;
         }
 
-        .btn-submit:hover {
-            background: #218838;
-        }
-
-        /* Сәтті жіберілген хабарлама */
-        #success-message {
-            display: none;
-            padding: 30px;
-            color: #28a745;
-            border: 2px solid #28a745;
-            border-radius: 15px;
-            background: #f0fff4;
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        #success-message h3 { margin-top: 0; color: #28a745; }
-
-        /* Әулет есімі */
-        .family-name {
-            margin-top: 40px;
+        .footer-text {
             font-family: 'Playfair Display', serif;
             font-style: italic;
             font-size: 1.4rem;
-            color: var(--dark-gold);
+            margin-top: 50px;
+            line-height: 1.4;
         }
 
-        footer {
-            text-align: center;
-            padding-bottom: 50px;
-            color: #bbb;
-            font-size: 0.8rem;
-            font-weight: 300;
-        }
-
-        /* Мобильді телефондарға бейімдеу (Responsive) */
-        @media (max-width: 480px) {
-            .hero h1 { font-size: 2.8rem; }
-            .hero p { font-size: 1rem; }
-            .age-badge { font-size: 0.9rem; padding: 6px 20px; }
-            
-            .invitation-card { width: 92%; padding: 40px 20px; margin-top: -60px; }
-            .invitation-card h2 { font-size: 2.8rem; }
-            .invitation-card p { font-size: 1rem; }
-            
-            .timer { gap: 10px; }
-            .time-item { min-width: 65px; padding: 10px; }
-            .time-item span { font-size: 1.6rem; }
-            
-            .rsvp-form { padding: 25px 20px; }
-            .rsvp-form h3 { font-size: 1.5rem; }
+        .venue-info {
+            font-weight: bold;
+            color: #d4af37;
         }
     </style>
 </head>
 <body>
 
-    <section class="hero">
-        <div data-aos="fade-down" class="age-badge">Мерейтой 50 жас</div>
-        <h1 data-aos="zoom-in">Шұғыла</h1>
-        <p data-aos="fade-up" data-aos-delay="200">Аяулы анамыздың мерейлі мерекесіне шақырамыз!</p>
-        
-        <div class="timer" id="countdown">
-            <div class="time-item"><span id="days">00</span><label>Күн</label></div>
-            <div class="time-item"><span id="hours">00</span><label>Сағат</label></div>
-            <div class="time-item"><span id="minutes">00</span><label>Мин</label></div>
-        </div>
-    </section>
+    <div class="container" data-aos="fade-up">
+        <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="icon" class="header-img">
 
-    <div class="invitation-card" data-aos="fade-up">
-        <h2>Құрметті қонақтар!</h2>
-        <p>Әулетіміздің берекесі, асыл анамыз <strong>Шұғыланың</strong> 50 жасқа толған мерейтойының қадірлі қонағы болуға шақырамыз!</p>
-        
-        <div class="divider"></div>
+        <div class="top-text">Мерейтой иесі:</div>
+        <div class="main-name">Шұғыла</div>
 
-        <div class="info-row">
-            <strong>Күні мен уақыты</strong>
-            <span>21 Наурыз, 2026 жыл | Сағат 19:00</span>
+        <div class="invite-text">
+            Тойға келуіңізді<br>растауыңызды сұраймыз!
         </div>
 
-        <div class="info-row">
-            <strong>Мекенжайы</strong>
-            <span>Шаян ауылы, "Қанағат" тойханасы</span>
+        <div class="details">
+            📅 21.03.2026 ж. Сағат 19:00<br>
+            📍 Шаян ауылы<br>
+            <span class="venue-info">"Қанағат" тойханасы</span>
         </div>
 
-        <a href="http://maps.apple.com/?q=Qanağat Toyxanasy Shayan" target="_blank" class="btn-map">📍 Картадан көру</a>
+        <a href="СЕНІҢ_ФОРМА_СІЛТЕМЕСІ" class="btn-submit">Жіберу</a>
 
-        <div class="rsvp-form" id="rsvp-container">
-            <h3>Жауабыңызды күтеміз</h3>
-            
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLSdh0wkgRTGWYx7aCimsKXwDwfSOiIyJpjQMHBGJDGmjmfv6Cg/formResponse" 
-                  method="POST" 
-                  target="hidden_iframe" 
-                  onsubmit="return handleFormSubmit();">
-                
-                <label>Аты-жөніңіз:</label>
-                <input type="text" name="entry.1290305503" id="guestName" required placeholder="Мысалы: Асхат отбасымен">
-                
-                <label>Адам саны:</label>
-                <select name="entry.884702377">
-                    <option value="1">1 адам</option>
-                    <option value="2">2 адам</option>
-                    <option value="3">3 адам</option>
-                    <option value="4">4 адам</option>
-                    <option value="5+">5+ адам</option>
-                </select>
-
-                <label>Шешіміңіз:</label>
-                <select name="entry.1791346714">
-                    <option value="Келемін">Иә, әрине келеміз! ✅</option>
-                    <option value="Келе алмаймын">Өкінішке орай, келе алмаймыз ❌</option>
-                </select>
-
-                <button type="submit" class="btn-submit">Жауапты жіберу</button>
-            </form>
-        </div>
-
-        <div id="success-message">
-            <h3>Рахмет!</h3>
-            <p>Сіздің жауабыңыз қабылданды. ✅</p>
-        </div>
-
-        <div class="family-name">
-            Альжановтар әулеті
+        <div class="footer-text">
+            Келіңіздер, тойымыздың қадірлі қонағы болыңыздар!<br>
+            <br>
+            <small style="font-size: 1rem; font-family: 'Montserrat'">Альжановтар әулеті</small>
         </div>
     </div>
 
-    <footer>Created with ♥ for Mom</footer>
-
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="onFormLoad();"></iframe>
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1200, once: true }); // Анимация ұзақтығын кішкене арттырдық
-
-        // Кері санақ таймерінің логикасы
-        const eventDate = new Date("Mar 21, 2026 19:00:00").getTime();
-        setInterval(() => {
-            const now = new Date().getTime();
-            const diff = eventDate - now;
-            if (diff < 0) return; // Егер уақыт өтіп кетсе, ештеңе істемеу
-
-            document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
-            document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
-            document.getElementById("minutes").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
-        }, 1000);
-
-        // RSVP Формасын өңдеу логикасы
-        let isSubmitted = false;
-
-        function handleFormSubmit() {
-            const name = document.getElementById('guestName').value.trim();
-            if (!name) {
-                alert("Өтініш, аты-жөніңізді жазыңыз!");
-                return false;
-            }
-            isSubmitted = true;
-            return true; // Форманы Google-ге жіберуге рұқсат беру
-        }
-
-        // iframe жүктелгенде (форма жіберілген соң) шақырылады
-        function onFormLoad() {
-            if (isSubmitted) {
-                // Форманы жасырып, сәтті хабарламаны көрсету
-                document.getElementById('rsvp-container').style.display = 'none';
-                document.getElementById('success-message').style.display = 'block';
-                // Төменге, хабарламаға қарай баяу айналдыру
-                document.getElementById('success-message').scrollIntoView({ behavior: 'smooth' });
-            }
-        }
+        AOS.init({ duration: 1200 });
     </script>
 </body>
 </html>
