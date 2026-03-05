@@ -235,44 +235,70 @@
     <footer>Created by AITU Student</footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
+<script>
+    AOS.init({ duration: 1000, once: true });
 
-        // Timer Logic
-        const eventDate = new Date("Mar 21, 2026 19:00:00").getTime();
-        setInterval(() => {
-            const now = new Date().getTime();
-            const diff = eventDate - now;
-            if (diff < 0) return;
+    // Таймер логикасы
+    const eventDate = new Date("Mar 21, 2026 19:00:00").getTime();
+    setInterval(() => {
+        const now = new Date().getTime();
+        const diff = eventDate - now;
+        if (diff < 0) return;
+        document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+        document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        document.getElementById("minutes").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    }, 1000);
 
-            document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
-            document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById("minutes").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        }, 1000);
+    // МІНЕ, ОСЫ ЖЕРДІ ӨЗГЕРТТІК (Google Формаға жіберу)
+    function sendRSVP(status) {
+        const name = document.getElementById('guestName').value.trim();
+        const count = document.getElementById('guestCount').value;
 
-        // RSVP Logic - Кез келген браузерге арналған түзету
-        function sendRSVP(status) {
-            const name = document.getElementById('guestName').value.trim();
-            const count = document.getElementById('guestCount').value;
-            const phone = "77XXXXXXXXX"; // ОСЫ ЖЕРГЕ НӨМІРІҢІЗДІ ЖАЗЫҢЫЗ
-
-            if (!name) {
-                alert("Өтініш, есіміңізді жазыңыз!");
-                return;
-            }
-
-            const text = "Сәлеметсіз бе! Шұғыла анамыздың тойына жауап:\n\n" +
-                         "👤 Аты: " + name + "\n" +
-                         "👨‍👩‍👧‍👦 Адам саны: " + count + "\n" +
-                         "💬 Шешімі: " + status;
-
-            const encodedText = encodeURIComponent(text);
-            const whatsappUrl = "https://wa.me/" + phone + "?text=" + encodedText;
-
-            // Телефонда және ноутбукта бірдей жұмыс істеу үшін
-            window.location.href = whatsappUrl;
+        if (!name) {
+            alert("Өтініш, есіміңізді жазыңыз!");
+            return;
         }
-    </script>
+
+        const formID = "1FAIpQLSdh0wkgRTGWYx7aCimsKXwDwfSOiIyJpjQMHBGJDGmjmfv6Cg";
+        const entryName = "entry.1290305503";   
+        const entryCount = "entry.884702377";   
+        const entryStatus = "entry.1791346714"; 
+
+        const baseURL = `https://docs.google.com/forms/d/e/${formID}/formResponse`;
+        
+        const params = new URLSearchParams();
+        params.append(entryName, name);
+        params.append(entryCount, count);
+        params.append(entryStatus, status);
+
+        const rsvpBlock = document.querySelector('.rsvp-form');
+        rsvpBlock.style.opacity = "0.5";
+        rsvpBlock.style.pointerEvents = "none";
+
+        fetch(baseURL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: params.toString()
+        })
+        .then(() => {
+            rsvpBlock.style.opacity = "1";
+            rsvpBlock.style.pointerEvents = "auto";
+            rsvpBlock.innerHTML = `
+                <div style="padding: 20px; border: 2px solid #28a745; border-radius: 10px; background: #f0fff4; text-align: center;">
+                    <h3 style="font-family: 'Playfair Display', serif; color: #28a745; margin-top: 0;">Рахмет, ${name}!</h3>
+                    <p style="margin-bottom: 0;">Сіздің жауабыңыз қабылданды. <br> <b>Шешіміңіз: ${status}</b></p>
+                </div>
+            `;
+        })
+        .catch(err => {
+            alert("Қате кетті. Қайта көріңіз.");
+            rsvpBlock.style.opacity = "1";
+            rsvpBlock.style.pointerEvents = "auto";
+        });
+    }
+</script>
 </body>
 </html>
+
 
