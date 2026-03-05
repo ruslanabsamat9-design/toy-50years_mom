@@ -2,533 +2,132 @@
 <html lang="kk">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Шұғыла Анамыздың 50 жас мерейтойы</title>
+<title>Шуғыланың 50 жас мерейтойы</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Parisienne&family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 
-:root{
---gold:#caa74a;
---lightgold:#f4e7c5;
---bg:#ffffff;
-}
-
 body{
 margin:0;
-background:var(--bg);
-font-family:"Cormorant Garamond",serif;
-color:#444;
-}
-
-/* HERO */
-
-.hero{
-
-height:90vh;
-
-background:
-linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.9)),
-url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622");
-
-background-size:cover;
-background-position:center;
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-
+font-family:'Cinzel', serif;
+background:linear-gradient(180deg,#fff7e6,#f6e2b3);
 text-align:center;
-padding:20px;
-
+color:#6b4c1e;
 }
 
-.age{
-
-border:1px solid var(--gold);
-padding:8px 30px;
-border-radius:40px;
-color:var(--gold);
-font-family:Montserrat;
-letter-spacing:2px;
-font-size:13px;
-
-}
-
-.hero h1{
-
-font-family:"Cinzel Decorative";
-
-font-size:80px;
-
-color:var(--gold);
-
-margin:10px 0;
-
-}
-
-.hero p{
-
-font-family:"Parisienne";
-
-font-size:32px;
-
-color:#555;
-
-margin:0;
-
-}
-
-/* TIMER */
-
-.timer{
-
-display:flex;
-
-gap:15px;
-
-margin-top:25px;
-
-}
-
-.time{
-
-border:1px solid var(--lightgold);
-
-padding:15px;
-
-border-radius:10px;
-
+.container{
+width:800px;
+margin:auto;
+padding:40px;
 background:white;
-
-min-width:80px;
-
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
-
+border:6px solid gold;
+border-radius:20px;
+box-shadow:0 0 40px rgba(0,0,0,0.2);
 }
 
-.time span{
-
-display:block;
-
+.title{
 font-size:28px;
-
-color:var(--gold);
-
-font-weight:700;
-
-}
-
-/* CARD */
-
-.card{
-
-max-width:700px;
-
-margin:-70px auto 40px;
-
-background:white;
-
-padding:50px 35px;
-
-border-radius:18px;
-
-box-shadow:0 20px 40px rgba(0,0,0,0.08);
-
-text-align:center;
-
-position:relative;
-
-}
-
-/* GOLD FRAME */
-
-.card:before{
-
-content:"";
-
-position:absolute;
-
-top:15px;
-
-left:15px;
-
-right:15px;
-
-bottom:15px;
-
-border:1px solid var(--gold);
-
-border-radius:12px;
-
-pointer-events:none;
-
-}
-
-/* TITLE */
-
-.card h2{
-
-font-family:"Parisienne";
-
-font-size:46px;
-
-color:var(--gold);
-
+letter-spacing:2px;
 margin-bottom:10px;
-
 }
 
-/* DIVIDER */
-
-.divider{
-
-width:90px;
-
-height:2px;
-
-background:var(--gold);
-
-margin:25px auto;
-
+.name{
+font-family:'Great Vibes', cursive;
+font-size:80px;
+color:#c89b3c;
+margin:10px 0;
 }
 
-/* INFO */
+.subtitle{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.section{
+background:#fffaf0;
+padding:30px;
+border-radius:15px;
+border:2px solid gold;
+}
+
+.section h2{
+font-size:30px;
+margin-bottom:20px;
+}
 
 .info{
-
-margin:20px 0;
-
-font-size:20px;
-
+font-size:18px;
+margin:10px 0;
 }
 
-.info strong{
-
-display:block;
-
-font-family:Montserrat;
-
-font-size:12px;
-
-letter-spacing:2px;
-
-color:var(--gold);
-
-margin-bottom:6px;
-
-}
-
-/* MAP */
-
-.map{
-
+.button{
 display:inline-block;
-
-background:var(--gold);
-
+padding:12px 30px;
+margin:15px;
+border-radius:30px;
+border:none;
+background:linear-gradient(90deg,#d4af37,#f6d77b);
 color:white;
-
-padding:12px 20px;
-
-border-radius:8px;
-
-text-decoration:none;
-
-font-family:Montserrat;
-
-margin-top:15px;
-
-}
-
-/* RSVP */
-
-.rsvp{
-
-margin-top:30px;
-
-background:#faf9f6;
-
-padding:30px;
-
-border-radius:12px;
-
-border:1px solid #eee;
-
-}
-
-.rsvp h3{
-
-font-family:"Cormorant Garamond";
-
-font-size:28px;
-
-color:var(--gold);
-
-margin-top:0;
-
-}
-
-input{
-
-width:100%;
-
-padding:12px;
-
-margin:12px 0 20px;
-
-border-radius:8px;
-
-border:1px solid #ddd;
-
-font-family:Montserrat;
-
-}
-
-/* BUTTONS */
-
-.buttons{
-
-display:flex;
-
-flex-direction:column;
-
-gap:10px;
-
-}
-
-.btn{
-
-padding:14px;
-
-border-radius:8px;
-
-border:1px solid var(--gold);
-
-background:white;
-
-color:var(--gold);
-
-font-family:Montserrat;
-
-font-weight:600;
-
+font-size:18px;
 cursor:pointer;
-
-transition:.3s;
-
 }
 
-.btn:hover{
-
-background:var(--gold);
-
-color:white;
-
+.button2{
+background:linear-gradient(90deg,#b68a2e,#e0b04f);
 }
 
-/* FOOTER */
-
-footer{
-
-text-align:center;
-
-padding:40px;
-
-font-family:Montserrat;
-
-font-size:13px;
-
-color:#999;
-
-}
-
-/* MOBILE */
-
-@media(max-width:480px){
-
-.hero h1{
-
-font-size:55px;
-
-}
-
-.hero p{
-
-font-size:24px;
-
-}
-
-.card{
-
-width:90%;
-
-}
-
+.footer{
+margin-top:40px;
+font-family:'Great Vibes', cursive;
+font-size:30px;
+color:#b08a3a;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<section class="hero">
+<div class="container">
 
-<div class="age">50 ЖАС МЕРЕЙТОЙ</div>
+<div class="title">Мерейтой 50 жас</div>
 
-<h1>Шұғыла</h1>
+<div class="name">Шуғыла</div>
 
-<p>Аяулы анамыздың мерейлі мерекесіне шақырамыз</p>
+<div class="subtitle">Аяулы анамыздың мерейлі мерекесіне шақырамыз!</div>
 
-<div class="timer">
-
-<div class="time">
-<span id="days">00</span>
-күн
-</div>
-
-<div class="time">
-<span id="hours">00</span>
-сағат
-</div>
-
-<div class="time">
-<span id="minutes">00</span>
-мин
-</div>
-
-</div>
-
-</section>
-
-<div class="card">
+<div class="section">
 
 <h2>Құрметті қонақтар!</h2>
 
-<p style="font-size:20px">
-
-Әулетіміздің берекесі, асыл анамыз
-
-<strong>Шұғыланың</strong>
-
-50 жас мерейтойының
-
-қадірлі қонағы болуға шақырамыз
-
-</p>
-
-<div class="divider"></div>
-
 <div class="info">
-
-<strong>Күні мен уақыты</strong>
-
-21 Наурыз 2026 | 19:00
-
+Әулетіміздің берекесі, асыл анамыз <b>Шуғыланың</b>  
+50 жас мерейтойының қадірлі қонағы болуға шақырамыз!
 </div>
 
 <div class="info">
+📅 21 Наурыз 2026 жыл  
+</div>
 
-<strong>Мекенжайы</strong>
+<div class="info">
+🕖 Сағат 19:00
+</div>
 
-Шаян ауылы — Қанағат тойханасы
+<div class="info">
+📍 Шаян ауылы, "Қанат" тойханасы
+</div>
+
+<button class="button">Жұбайыммен бірге барамын</button>
+<button class="button button2">Өзім барамын</button>
 
 </div>
 
-<a class="map" href="https://maps.google.com/?q=Қанағат+тойханасы+Шаян" target="_blank">
-
-📍 Картадан көру
-
-</a>
-
-<div class="rsvp">
-
-<h3>Жауабыңызды күтеміз</h3>
-
-<input id="name" placeholder="Аты-жөніңіз">
-
-<div class="buttons">
-
-<button class="btn" onclick="send('Өзім барамын')">
-Өзім барамын
-</button>
-
-<button class="btn" onclick="send('Жұбайыммен бірге барамын')">
-Жұбайыммен бірге барамын
-</button>
-
-<button class="btn" onclick="send('Келе алмаймын')">
-Келе алмаймын
-</button>
-
+<div class="footer">
+Алжановтар әулеті
 </div>
 
 </div>
-
-<p style="margin-top:30px;font-style:italic;font-size:20px">
-
-Альжановтар әулеті
-
-</p>
-
-</div>
-
-<footer>
-
-Created by AITU Student
-
-</footer>
-
-<script>
-
-const date=new Date("Mar 21, 2026 19:00:00").getTime()
-
-setInterval(()=>{
-
-const now=new Date().getTime()
-
-const diff=date-now
-
-if(diff<0)return
-
-document.getElementById("days").innerText=Math.floor(diff/(1000*60*60*24))
-
-document.getElementById("hours").innerText=Math.floor((diff%(1000*60*60*24))/(1000*60*60))
-
-document.getElementById("minutes").innerText=Math.floor((diff%(1000*60*60))/(1000*60))
-
-},1000)
-
-function send(status){
-
-const name=document.getElementById("name").value
-
-const phone="77773491537"
-
-if(!name){
-
-alert("Атыңызды жазыңыз")
-
-return
-
-}
-
-const text=
-
-"Сәлеметсіз бе! Шұғыла анамыздың тойына жауап:\n\n"+
-
-"Аты: "+name+"\n"+
-
-"Жауап: "+status
-
-window.location.href="https://wa.me/"+phone+"?text="+encodeURIComponent(text)
-
-}
-
-</script>
 
 </body>
 </html>
