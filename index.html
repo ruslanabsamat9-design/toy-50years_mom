@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Шұғыла Анамыздың 50 жас мерейтойы</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700;900&family=Montserrat:wght@600;800&family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --gold: #caa74a;
-            --lightgold: #f4e7c5;
-            --bg: #ffffff;
+            --gold: #b38b2d; 
+            --navy: #002366; /* Қою көк түс */
+            --light-bg: #fdfbf7;
         }
 
         body {
             margin: 0;
-            background: var(--bg);
+            background: var(--light-bg);
             font-family: "Cormorant Garamond", serif;
-            color: #444;
-            overflow-x: hidden;
+            color: var(--navy); /* Негізгі мәтін түсі қою көк */
+            line-height: 1.4;
         }
 
         /* HERO SECTION */
         .hero {
-            height: 90vh;
-            background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.8)),
+            height: 85vh;
+            background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.6)),
                         url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622");
             background-size: cover;
             background-position: center;
@@ -38,61 +38,74 @@
         }
 
         .age {
-            border: 1px solid var(--gold);
-            padding: 8px 30px;
-            border-radius: 40px;
+            border: 3px solid var(--gold);
+            padding: 12px 40px;
+            border-radius: 50px;
             color: var(--gold);
             font-family: 'Montserrat', sans-serif;
-            letter-spacing: 2px;
-            font-size: 13px;
-            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            font-size: 16px;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         .hero h1 {
             font-family: "Great Vibes", cursive;
-            font-size: clamp(60px, 10vw, 90px);
+            font-size: clamp(80px, 15vw, 120px);
             color: var(--gold);
-            margin: 10px 0;
+            margin: 15px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
         .hero p {
             font-family: "Playfair Display", serif;
-            font-size: 24px;
-            font-style: italic;
-            color: #666;
+            font-size: 32px; /* Үлкейтілді */
+            font-weight: 900; /* Барынша қанық */
+            color: var(--navy);
+            max-width: 85%;
+            margin: 0;
         }
 
         /* TIMER */
         .timer {
             display: flex;
             gap: 15px;
-            margin-top: 25px;
+            margin-top: 35px;
         }
 
         .time {
-            border: 1px solid var(--lightgold);
-            padding: 15px;
-            border-radius: 10px;
             background: white;
-            min-width: 70px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            padding: 15px 20px;
+            border-radius: 15px;
+            min-width: 90px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border: 2px solid var(--gold);
         }
 
         .time span {
             display: block;
-            font-size: 28px;
+            font-size: 38px;
             color: var(--gold);
-            font-weight: 700;
+            font-weight: 900;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .time-text {
+            color: var(--navy);
+            font-weight: 800;
+            font-size: 14px;
+            text-transform: uppercase;
         }
 
         /* CARD */
         .card {
-            max-width: 600px;
-            margin: -70px auto 40px;
+            max-width: 650px;
+            margin: -80px auto 50px;
             background: white;
-            padding: 50px 35px;
-            border-radius: 18px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            padding: 70px 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
             text-align: center;
             position: relative;
             z-index: 10;
@@ -101,112 +114,134 @@
         .card:before {
             content: "";
             position: absolute;
-            top: 15px; left: 15px; right: 15px; bottom: 15px;
-            border: 1px solid var(--gold);
-            border-radius: 12px;
+            top: 20px; left: 20px; right: 20px; bottom: 20px;
+            border: 2px solid var(--gold);
+            border-radius: 20px;
             pointer-events: none;
+            opacity: 0.4;
         }
 
         .card h2 {
             font-family: "Playfair Display", serif;
-            font-size: 32px;
+            font-size: 42px;
             color: var(--gold);
+            margin-bottom: 20px;
+            font-weight: 900;
         }
 
         .divider {
-            width: 80px;
-            height: 1px;
+            width: 120px;
+            height: 3px;
             background: var(--gold);
-            margin: 25px auto;
+            margin: 35px auto;
         }
 
         .info {
-            margin: 20px 0;
-            font-size: 20px;
+            margin: 30px 0;
         }
 
         .info strong {
             display: block;
             font-family: 'Montserrat', sans-serif;
-            font-size: 12px;
+            font-size: 15px;
             letter-spacing: 2px;
             color: var(--gold);
-            margin-bottom: 6px;
+            margin-bottom: 10px;
             text-transform: uppercase;
+            font-weight: 800;
         }
 
-        .map {
+        .info p {
+            font-size: 26px; /* Үлкейтілді */
+            font-weight: 900; /* Барынша қанық */
+            margin: 0;
+            color: var(--navy);
+        }
+
+        .map-btn {
             display: inline-block;
-            background: var(--gold);
+            background: #27ae60;
             color: white;
-            padding: 12px 25px;
-            border-radius: 30px;
+            padding: 18px 40px;
+            border-radius: 50px;
             text-decoration: none;
             font-family: 'Montserrat', sans-serif;
-            font-size: 14px;
-            margin-top: 15px;
+            font-weight: 800;
+            font-size: 18px;
+            margin-top: 25px;
+            box-shadow: 0 6px 20px rgba(39,174,96,0.4);
             transition: 0.3s;
         }
 
         /* RSVP */
         .rsvp {
-            margin-top: 40px;
-            background: #faf9f6;
-            padding: 30px;
-            border-radius: 12px;
+            margin-top: 50px;
+            background: #f0f4f8; /* Көкшіл фокус үшін */
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid var(--navy);
+        }
+
+        .rsvp h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--navy);
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 20px;
         }
 
         input {
             width: 100%;
-            padding: 12px;
+            padding: 18px;
             margin: 15px 0;
-            border-radius: 8px;
-            border: 1px solid #ddd;
+            border-radius: 12px;
+            border: 3px solid #ced4da;
+            font-size: 18px;
+            font-weight: 700;
+            outline: none;
             box-sizing: border-box;
         }
 
+        input:focus { border-color: var(--gold); }
+
         .btn {
             width: 100%;
-            padding: 14px;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            border: 1px solid var(--gold);
-            background: white;
-            color: var(--gold);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            border: none;
+            background: var(--navy);
+            color: white;
             font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
+            font-weight: 800;
+            font-size: 18px;
             cursor: pointer;
             transition: .3s;
         }
 
-        .btn:hover {
-            background: var(--gold);
-            color: white;
-        }
+        .btn:hover { background: var(--gold); }
 
-        /* MUSIC BUTTON */
         #musicToggle {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 30px;
+            right: 30px;
             z-index: 1000;
             background: var(--gold);
             color: white;
             border: none;
-            width: 45px;
-            height: 45px;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            font-size: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            font-size: 28px;
         }
 
         @media(max-width:480px){
-            .hero h1 { font-size: 55px; }
-            .card { width: 85%; padding: 40px 20px; }
+            .hero h1 { font-size: 80px; }
+            .hero p { font-size: 26px; }
+            .card { width: 90%; padding: 50px 25px; }
+            .info p { font-size: 22px; }
         }
     </style>
 </head>
@@ -221,20 +256,20 @@
 <section class="hero">
     <div class="age">50 ЖАС МЕРЕЙТОЙ</div>
     <h1>Шұғыла</h1>
-    <p>Аяулы анамыздың мерейлі мерекесі</p>
+    <p>Асыл анамыздың мерейлі мерекесіне шақырамыз</p>
 
     <div class="timer">
-        <div class="time"><span id="days">00</span>күн</div>
-        <div class="time"><span id="hours">00</span>сағат</div>
-        <div class="time"><span id="minutes">00</span>мин</div>
+        <div class="time"><span id="days">00</span><div class="time-text">күн</div></div>
+        <div class="time"><span id="hours">00</span><div class="time-text">сағат</div></div>
+        <div class="time"><span id="minutes">00</span><div class="time-text">мин.</div></div>
     </div>
 </section>
 
 <div class="card">
     <h2>Құрметті қонақтар!</h2>
-    <p style="font-size:18px; line-height: 1.6;">
+    <p style="font-size:26px; font-weight: 800; color: var(--navy);">
         Әулетіміздің берекесі, асыл анамыз<br>
-        <strong style="font-size: 24px; color: var(--gold);">Шұғыланың</strong><br>
+        <span style="font-size: 45px; color: var(--gold); display:block; margin: 15px 0; font-weight: 900;">Шұғыланың</span>
         50 жас мерейтойының қадірлі қонағы болуға шақырамыз!
     </p>
 
@@ -242,36 +277,36 @@
 
     <div class="info">
         <strong>Күні мен уақыты</strong>
-        21 Наурыз 2026 | 19:00
+        <p>21 Наурыз 2026 | 19:00</p>
     </div>
 
     <div class="info">
         <strong>Мекенжайы</strong>
-        Шаян ауылы — Қанағат тойханасы
+        <p>Шаян ауылы, Қанағат тойханасы</p>
     </div>
 
-    <a class="map" href="https://maps.google.com" target="_blank">📍 Картадан көру</a>
+    <a class="map-btn" href="https://www.google.com/maps/search/%D0%A8%D0%B0%D1%8F%D0%BD+%D0%9A%D0%B0%D0%BD%D0%B0%D2%93%D0%B0%D1%82+%D1%82%D0%BE%D0%B9%D1%85%D0%B0%D0%BD%D0%B0%D1%81%D1%8B" target="_blank">
+        📍 КАРТАДАН КӨРУ
+    </a>
 
     <div class="rsvp">
-        <h3 style="font-family: Montserrat; color: var(--gold);">Жауабыңызды күтеміз</h3>
-        <input type="text" id="guestName" placeholder="Аты-жөніңіз">
+        <h3>Жауабыңызды күтеміз</h3>
+        <input type="text" id="guestName" placeholder="Аты-жөніңізді жазыңыз">
         
-        <button class="btn" onclick="sendWhatsApp('Өзім барамын')">Өзім барамын</button>
-        <button class="btn" onclick="sendWhatsApp('Жұбайыммен бірге барамын')">Жұбайыммен бірге</button>
-        <button class="btn" onclick="sendWhatsApp('Келе алмаймын')">Келе алмаймын</button>
+        <button class="btn" onclick="sendWhatsApp('Иә, барамын')">ИӘ, БАРАМЫН</button>
+        <button class="btn" onclick="sendWhatsApp('Жұбайыммен барамын')">ЖҰБАЙЫММЕН БАРАМЫН</button>
+        <button class="btn" style="background:#8e9aad;" onclick="sendWhatsApp('Келе алмаймын')">КЕЛЕ АЛМАЙМЫН</button>
     </div>
 
-    <p style="margin-top:40px; font-style:italic;">Альжановтар әулеті</p>
+    <p style="margin-top:50px; font-weight: 900; font-size: 26px; color: var(--navy);">Альжановтар әулеті</p>
 </div>
 
 <script>
-    // ТАЙМЕР
     const targetDate = new Date("March 21, 2026 19:00:00").getTime();
 
     setInterval(() => {
         const now = new Date().getTime();
         const diff = targetDate - now;
-
         if (diff > 0) {
             document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
             document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -279,7 +314,6 @@
         }
     }, 1000);
 
-    // МУЗЫКА БАСҚАРУ
     const music = document.getElementById("bgMusic");
     const musicBtn = document.getElementById("musicToggle");
 
@@ -293,33 +327,19 @@
         }
     }
 
-    // БРАУЗЕР ШЕКТЕУІН АЙНАЛЫП ӨТУ ФУНКЦИЯСЫ
-    const autoPlayMusic = () => {
-        music.play().then(() => {
-            musicBtn.innerText = "⏸️";
-        }).catch(() => {
-            console.log("Авто ойнату әлі бұғаттаулы");
-        });
+    const autoPlay = () => {
+        music.play().then(() => { musicBtn.innerText = "⏸️"; }).catch(() => {});
     };
+    document.addEventListener('click', autoPlay, { once: true });
+    document.addEventListener('scroll', autoPlay, { once: true });
+    document.addEventListener('touchstart', autoPlay, { once: true });
 
-    // Қолданушы экранға тисе немесе парақшаны жылжытса музыканы қосу
-    document.addEventListener('click', autoPlayMusic, { once: true });
-    document.addEventListener('scroll', autoPlayMusic, { once: true });
-    document.addEventListener('touchstart', autoPlayMusic, { once: true });
-
-    // WHATSAPP ЖІБЕРУ
     function sendWhatsApp(status) {
         const name = document.getElementById("guestName").value;
         const phone = "77773491537";
-
-        if (!name) {
-            alert("Өтініш, аты-жөніңізді жазыңыз");
-            return;
-        }
-
+        if (!name) { alert("Өтініш, атыңызды жазыңыз"); return; }
         const message = `Сәлеметсіз бе! Шұғыла анамыздың тойына жауап:\n\nАты: ${name}\nЖауап: ${status}`;
-        const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-        window.open(url, '_blank');
+        window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
     }
 </script>
 
