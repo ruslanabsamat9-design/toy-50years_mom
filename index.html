@@ -12,13 +12,14 @@
             margin: 0;
             padding: 0;
             font-family: 'Montserrat', sans-serif;
-            /* Скриншоттағыдай алтын ұшқындары бар ақ фон */
+            /* ЖАҢАРТЫЛҒАН ФОН: Ақ түс және алтын блесткалар суреті */
             background-color: #ffffff;
-            background-image: url('https://www.transparenttextures.com/patterns/white-diamond.png'), 
-                              url('https://img.freepik.com/free-vector/luxury-white-background-with-golden-glitter_23-2148823133.jpg');
+            background-image: url('https://img.freepik.com/free-vector/luxury-white-background-with-golden-glitter_23-2148823133.jpg');
             background-size: cover;
-            background-attachment: fixed;
-            color: #1d3557;
+            background-position: center;
+            background-attachment: fixed; /* Скролл жасағанда фон қозғалмайды */
+            background-repeat: no-repeat;
+            color: #1d3557; /* Қою көк мәтін */
             text-align: center;
         }
 
@@ -30,7 +31,8 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            background: rgba(255, 255, 255, 0.8); /* Мәтін жақсы оқылуы үшін */
+            /* Фон анық көрінуі үшін контейнерді мөлдір қылдық */
+            background: rgba(255, 255, 255, 0.5); 
         }
 
         .header-img {
@@ -62,7 +64,7 @@
             font-size: 1.1rem;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: #d4af37;
+            color: #d4af37; /* Алтын түс */
             margin-top: 40px;
             font-weight: 600;
         }
@@ -83,6 +85,11 @@
             font-size: 1.1rem;
             margin-top: 20px;
             transition: 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #d4af37;
+            transform: scale(1.05);
         }
 
         .footer-text {
@@ -132,4 +139,3 @@
     </script>
 </body>
 </html>
-
