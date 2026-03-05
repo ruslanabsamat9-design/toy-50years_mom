@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тойға шақырту | Шыңғысхан - Айжан</title>
+    <title>Шұғыла анамыздың 50 жас мерейтойы</title>
     <style>
-        /* CSS СТИЛЬДЕРІ */
+        /* НЕГІЗГІ СТИЛЬДЕР */
         body {
-            background-color: #fdfbf7;
+            background-color: #fcfaf5;
             font-family: 'Times New Roman', serif;
             display: flex;
             justify-content: center;
@@ -23,64 +23,60 @@
             width: 100%;
             padding: 50px 30px;
             text-align: center;
-            border: 1px solid #d4af37;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border: 2px solid #d4af37;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
             position: relative;
-            /* Алтын ұшқындар стилі (background-image қосуға болады) */
-            background-image: radial-gradient(circle at top right, rgba(212, 175, 55, 0.1), transparent);
+            background-image: radial-gradient(circle at top right, rgba(212, 175, 55, 0.15), transparent);
         }
 
+        /* МӘТІН ТҮСТЕРІ */
         .gold-text {
             color: #b8860b;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 5px;
+            margin: 10px 0;
+            font-weight: bold;
         }
 
-        .blue-text {
+        .blue-dark {
             color: #1a2a6c;
             font-weight: bold;
         }
 
         h1 {
             font-family: 'Georgia', serif;
-            font-size: 28px;
-            font-style: italic;
+            font-size: 32px;
             color: #1a2a6c;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
-        .intro {
-            font-size: 18px;
+        .anniversary-title {
+            font-size: 24px;
             font-style: italic;
-            margin-bottom: 25px;
-            line-height: 1.4;
+            color: #b8860b;
+            margin-bottom: 20px;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #333;
         }
 
         .divider {
-            width: 80%;
+            width: 60%;
             height: 1px;
-            background: linear-gradient(to right, transparent, #b8860b, transparent);
-            margin: 20px auto;
+            background: linear-gradient(to right, transparent, #d4af37, transparent);
+            margin: 25px auto;
         }
 
-        .couple-names {
-            font-size: 24px;
-            letter-spacing: 3px;
-            margin: 15px 0;
-        }
-
-        .calendar-title {
-            font-size: 20px;
-            margin-top: 30px;
-        }
-
-        /* Күнтізбе стилі */
+        /* КҮНТІЗБЕ СТИЛІ */
         .calendar-table {
             width: 100%;
-            margin: 15px 0;
+            margin: 20px 0;
             border-collapse: collapse;
-            font-size: 14px;
+            font-size: 15px;
         }
 
         .calendar-table th {
@@ -89,7 +85,7 @@
         }
 
         .calendar-table td {
-            padding: 8px 5px;
+            padding: 8px 0;
         }
 
         .highlight {
@@ -97,63 +93,64 @@
             color: white;
             border-radius: 50%;
             display: inline-block;
-            width: 30px;
-            height: 30px;
-            line-height: 30px;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         .time-box {
-            font-size: 18px;
+            font-size: 20px;
             margin: 15px 0;
             border-top: 1px solid #eee;
             border-bottom: 1px solid #eee;
             padding: 10px 0;
+            letter-spacing: 2px;
         }
 
-        .address-box {
+        /* МЕКЕН-ЖАЙ */
+        .location {
             margin-top: 30px;
-            font-style: normal;
+            font-size: 18px;
             line-height: 1.6;
         }
 
-        /* Форма стилі */
+        /* ФОРМА (RSVP) */
         .rsvp-form {
             margin-top: 40px;
             text-align: left;
-            background: #fafafa;
+            background: #fdfaf5;
             padding: 25px;
-            border-radius: 5px;
-            border: 1px dashed #b8860b;
+            border: 1px solid #eee;
+            border-radius: 10px;
         }
 
-        .rsvp-form label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #1a2a6c;
-        }
-
-        .rsvp-form input[type="text"] {
+        input[type="text"] {
             width: 100%;
             padding: 12px;
-            margin-bottom: 20px;
+            margin: 10px 0 20px 0;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 5px;
             box-sizing: border-box;
         }
 
-        .radio-option {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            font-size: 15px;
+        .radio-group {
+            margin-bottom: 20px;
         }
 
-        .radio-option input {
+        .radio-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .radio-item input {
             margin-right: 10px;
         }
 
-        .submit-btn {
+        .btn-submit {
             background-color: #1a2a6c;
             color: white;
             border: none;
@@ -161,39 +158,38 @@
             width: 100%;
             border-radius: 30px;
             font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
             transition: 0.3s;
-            margin-top: 15px;
         }
 
-        .submit-btn:hover {
-            background-color: #0d1a4a;
+        .btn-submit:hover {
+            background-color: #b8860b;
         }
 
-        .footer-note {
+        .family-name {
             margin-top: 40px;
+            font-size: 20px;
             font-style: italic;
             color: #1a2a6c;
-            font-size: 18px;
         }
     </style>
 </head>
 <body>
 
 <div class="invitation-card">
-    <h1>Қос тойға шақырту</h1>
-    <p class="intro blue-text">Сіздерді әкеміз бен анамыздың алтын тойына шақырамыз!</p>
-    
+    <p class="gold-text">МЕРЕЙТОЙҒА ШАҚЫРУ</p>
+    <h1>ШҰҒЫЛА</h1>
+    <p class="anniversary-title">50 жас мерейтойы</p>
+
     <div class="divider"></div>
 
-    <div>
-        <p class="gold-text">Той иелері:</p>
-        <div class="couple-names blue-text">ШЫҢҒЫСХАН - АЙЖАН</div>
-    </div>
+    <p class="intro-text blue-dark">
+        Анамыз Шұғыланың 50 жас мерейтойының қадірлі қонағы болыңыздар!
+    </p>
 
     <div class="calendar-section">
-        <p class="gold-text calendar-title">Той салтанаты:</p>
-        <p class="blue-text" style="font-size: 1.2em;">23 НАУРЫЗ, 2026 ЖЫЛ</p>
+        <p class="gold-text">21 НАУРЫЗ, 2026 ЖЫЛ</p>
         
         <table class="calendar-table">
             <thead>
@@ -205,8 +201,8 @@
                 <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
                 <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
                 <tr><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
-                <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td></tr>
-                <tr><td class="highlight">23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td></tr>
+                <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td class="highlight">21</td><td>22</td></tr>
+                <tr><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td></tr>
                 <tr><td>30</td><td>31</td><td></td><td></td><td></td><td></td><td></td></tr>
             </tbody>
         </table>
@@ -214,43 +210,39 @@
         <div class="time-box gold-text">САҒАТ 19:00-ДЕ</div>
     </div>
 
-    <div class="address-box">
-        <p class="gold-text" style="font-size: 1.1em; font-weight: bold;">Мекен-жайымыз:</p>
-        <p class="blue-text">
-            ШЫМКЕНТ ҚАЛАСЫ,<br>
-            <strong>"GOLDEN HALL DAYANA"</strong><br>
-            МЕЙРАМХАНАСЫ,<br>
-            РАЙЫМБЕК Ж. КӨШЕСІ, 2
+    <div class="location">
+        <p class="gold-text">Мекен-жайымыз:</p>
+        <p class="blue-dark">
+            ШАЯН АУЫЛЫ,<br>
+            <strong>«ҚАНАҒАТ»</strong> ТОЙХАНАСЫ
         </p>
     </div>
 
     <div class="rsvp-form">
-        <p class="gold-text" style="font-size: 13px; text-align: center; margin-bottom: 20px;">
-            ТОЙҒА КЕЛУІҢІЗДІ РАСТАУЫҢЫЗДЫ СҰРАЙМЫЗ!
+        <p style="text-align: center; font-size: 14px; font-weight: bold; color: #b8860b; margin-bottom: 15px;">
+            КЕЛУІҢІЗДІ РАСТАУЫҢЫЗДЫ СҰРАЙМЫЗ
         </p>
         <form>
-            <label for="guest-name">Есіміңіз</label>
-            <input type="text" id="guest-name" placeholder="Аты-жөніңізді жазыңыз" required>
+            <label for="guest-name">Аты-жөніңіз:</label>
+            <input type="text" id="guest-name" placeholder="Атыңызды жазыңыз..." required>
 
-            <label>Тойға келесіз бе?</label>
-            <div class="radio-option">
-                <input type="radio" name="status" id="yes" value="yes">
-                <label for="yes" style="font-weight: normal; margin: 0;">Иә, келемін</label>
-            </div>
-            <div class="radio-option">
-                <input type="radio" name="status" id="couple" value="couple">
-                <label for="couple" style="font-weight: normal; margin: 0;">Жұбайыммен келемін</label>
-            </div>
-            <div class="radio-option">
-                <input type="radio" name="status" id="no" value="no">
-                <label for="no" style="font-weight: normal; margin: 0;">Өкінішке орай, келе алмаймын</label>
+            <div class="radio-group">
+                <label class="radio-item">
+                    <input type="radio" name="rsvp" value="yes"> Иә, келемін
+                </label>
+                <label class="radio-item">
+                    <input type="radio" name="rsvp" value="couple"> Жұбайыммен келемін
+                </label>
+                <label class="radio-item">
+                    <input type="radio" name="rsvp" value="no"> Келе алмаймын
+                </label>
             </div>
 
-            <button type="submit" class="submit-btn">Жіберу</button>
+            <button type="submit" class="btn-submit">Жіберу</button>
         </form>
     </div>
 
-    <p class="footer-note">Келіңіздер, тойымыздың қадірлі қонағы болыңыздар!</p>
+    <p class="family-name">Альжановтар әулеті</p>
 </div>
 
 </body>
