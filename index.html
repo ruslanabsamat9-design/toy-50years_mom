@@ -2,126 +2,61 @@
 <html lang="kk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Шұғыла Анамыздың 50 жас мерейтойы</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&family=Playfair+Display:italic,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&family=Playfair+Display:italic,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
     <style>
-        :root {
-            --gold: #c5a059;
-            --dark-gold: #8e6d2d;
-            --bg: #fcfbf7;
-        }
+        :root { --gold: #c5a059; --bg: #fcfbf7; }
+        body { margin: 0; font-family: 'Montserrat', sans-serif; background: var(--bg); text-align: center; }
+        .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1350&q=80') center/cover; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; }
+        .invitation-card { max-width: 600px; margin: -60px auto 40px; background: white; padding: 40px 20px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); position: relative; z-index: 10; }
+        .rsvp-form { background: #fdfaf4; padding: 20px; border-radius: 15px; margin-top: 20px; border: 1px solid #eee; }
+        input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; }
+        .btn-submit { width: 100%; padding: 15px; border: none; border-radius: 8px; color: white; background: #28a745; font-weight: 600; cursor: pointer; }
+        #success-message { display: none; padding: 20px; color: #28a745; border: 2px solid #28a745; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1 data-aos="zoom-in" style="font-size: 3.5rem; font-family: 'Playfair Display', serif;">Шұғыла</h1>
+        <p>Аяулы анамыздың 50 жас мерейтойына шақырамыз!</p>
+    </section>
 
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg);
-            color: #333;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
+    <div class="invitation-card" data-aos="fade-up">
+        <h2>Құрметті қонақтар!</h2>
+        <p>21 Наурыз, 2026 жыл | Сағат 19:00</p>
+        <p>Шаян ауылы, "Қанағат" тойханасы</p>
 
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+        <div class="rsvp-form" id="rsvp-container">
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSdh0wkgRTGWYx7aCimsKXwDwfSOiIyJpjQMHBGJDGmjmfv6Cg/formResponse" method="POST" target="hidden_iframe" onsubmit="return handleFormSubmit();">
+                <input type="text" name="entry.1290305503" id="guestName" required placeholder="Аты-жөніңіз">
+                <select name="entry.884702377">
+                    <option value="1">1 адам</option><option value="2">2 адам</option><option value="3+">3+ адам</option>
+                </select>
+                <select name="entry.1791346714">
+                    <option value="Келемін">Келемін ✅</option>
+                    <option value="Келе алмаймын">Келе алмаймын ❌</option>
+                </select>
+                <button type="submit" class="btn-submit">Жіберу</button>
+            </form>
+        </div>
+        <div id="success-message"><h3>Рахмет! Жауабыңыз қабылданды.</h3></div>
+    </div>
 
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            margin: 10px 0;
-        }
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="onFormLoad();"></iframe>
 
-        .age-badge {
-            font-size: 1.2rem;
-            border: 2px solid var(--gold);
-            padding: 5px 25px;
-            border-radius: 50px;
-            margin-bottom: 20px;
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        let isSubmitted = false;
+        function handleFormSubmit() { isSubmitted = true; return true; }
+        function onFormLoad() {
+            if (isSubmitted) {
+                document.getElementById('rsvp-container').style.display = 'none';
+                document.getElementById('success-message').style.display = 'block';
+            }
         }
-
-        .timer {
-            display: flex;
-            gap: 10px;
-            margin-top: 30px;
-        }
-
-        .time-item {
-            background: rgba(255,255,255,0.15);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            padding: 10px;
-            border-radius: 10px;
-            min-width: 65px;
-            border: 1px solid rgba(255,255,255,0.3);
-        }
-
-        .invitation-card {
-            max-width: 600px;
-            margin: -60px auto 40px;
-            background: white;
-            padding: 40px 25px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            text-align: center;
-            position: relative;
-            z-index: 10;
-        }
-
-        .invitation-card h2 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 2.8rem;
-            color: var(--gold);
-            margin-bottom: 20px;
-        }
-
-        .divider {
-            width: 80px;
-            height: 2px;
-            background: var(--gold);
-            margin: 25px auto;
-            opacity: 0.4;
-        }
-
-        .info-row {
-            margin: 20px 0;
-        }
-
-        .info-row strong {
-            display: block;
-            color: var(--dark-gold);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.85rem;
-            margin-bottom: 5px;
-        }
-
-        .rsvp-form {
-            background: #fdfaf4;
-            padding: 25px;
-            border-radius: 15px;
-            margin-top: 30px;
-            border: 1px solid #eee;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 12px;
-            margin: 8px 0 18px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-family: 'Montserrat', sans-serif;
-            font-size:
+    </script>
+</body>
+</html>
