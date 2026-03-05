@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шұғыла Анамыздың 50 жас мерейтойы</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&family=Playfair+Display:italic,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #c5a059;
+            --dark-gold: #8e6d2d;
+            --bg: #fcfbf7;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Шапка / Hero */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        .age-badge {
+            font-size: 1.5rem;
+            border: 2px solid var(--gold);
+            padding: 5px 25px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+        }
+
+        /* Таймер */
+        .timer {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .time-item {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            border-radius: 10px;
+            min-width: 70px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* Негізгі блок */
+        .invitation-card {
+            max-width: 700px;
+            margin: -50px auto 50px;
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        .invitation-card h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 30px;
+        }
+
+        .info-row {
+            margin: 25px 0;
+            font-size: 1.1rem;
+        }
+
+        .info-row strong {
+            display: block;
+            color: var(--dark-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+        }
+
+        .divider {
+            width: 100px;
+            height: 2px;
+            background: var(--gold);
+            margin: 30px auto;
+            opacity: 0.5;
+        }
+
+        .family-name {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            margin-top: 40px;
+        }
+
+        .btn-map {
+            display: inline-block;
+            background: var(--gold);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 30px;
+            transition: 0.3s;
+        }
+
+        .btn-map:hover {
+            background: var(--dark-gold);
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.5rem; }
+            .invitation-card { padding: 30px 20px; width: 85%; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div data-aos="fade-down" class="age-badge">Мерейтой 50 жас</div>
+        <h1 data-aos="zoom-in">Шұғыла</h1>
+        <p data-aos="fade-up">Аяулы анамыздың мерейлі мерекесіне шақырамыз!</p>
+        
+        <div class="timer" id="countdown">
+            <div class="time-item"><span id="days" style="display:block; font-size: 1.5rem; font-weight: bold;">00</span>күн</div>
+            <div class="time-item"><span id="hours" style="display:block; font-size: 1.5rem; font-weight: bold;">00</span>сағат</div>
+            <div class="time-item"><span id="minutes" style="display:block; font-size: 1.5rem; font-weight: bold;">00</span>мин</div>
+        </div>
+    </section>
+
+    <div class="invitation-card" data-aos="fade-up">
+        <h2>Құрметті қонақтар!</h2>
+        <p>Әулетіміздің берекесі, асыл анамыз <strong>Шұғыланың</strong> 50 жасқа толған мерейтойының қадірлі қонағы болуға шақырамыз!</p>
+        
+        <div class="divider"></div>
+
+        <div class="info-row">
+            <strong>Күні мен уақыты</strong>
+            21 Наурыз, 2026 жыл | Сағат 19:00
+        </div>
+
+        <div class="info-row">
+            <strong>Мекенжайы</strong>
+            Шаян ауылы, "Қанағат" тойханасы
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="family-name">
+            Альжановтар әулеті
+        </div>
+
+        <a href="https://www.google.com/maps/search/Шаян+Қанағат+тойханасы" target="_blank" class="btn-map">📍 Картадан көру</a>
+    </div>
+    <div class="divider"></div>
+<div style="background: #f9f9f9; padding: 20px; border-radius: 10px; margin-top: 20px;">
+    <h3 style="font-family: 'Playfair Display', serif; color: var(--dark-gold);">Келетініңізді растаңыз</h3>
+    
+    <div style="margin-bottom: 15px; text-align: left;">
+        <label>Аты-жөніңіз:</label>
+        <input type="text" id="guestName" placeholder="Мысалы: Асхат және отбасы" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
+    </div>
+
+    <div style="margin-bottom: 15px; text-align: left;">
+        <label>Адам саны:</label>
+        <select id="guestCount" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
+            <option value="1">1 адам</option>
+            <option value="2">2 адам</option>
+            <option value="3">3 адам</option>
+            <option value="4">4+ адам</option>
+        </select>
+    </div>
+
+    <div style="display: flex; gap: 10px; margin-top: 20px;">
+        <button onclick="sendRSVP('Иә, әрине келемін!')" style="flex: 1; background: #28a745; color: white; border: none; padding: 12px; border-radius: 5px; cursor: pointer; font-weight: 600;">Келемін ✅</button>
+        <button onclick="sendRSVP('Өкінішке орай, келе алмаймын')" style="flex: 1; background: #dc3545; color: white; border: none; padding: 12px; border-radius: 5px; cursor: pointer; font-weight: 600;">Келе алмаймын ❌</button>
+    </div>
+</div>
+
+<script>
+function sendRSVP(status) {
+    const name = document.getElementById('guestName').value;
+    const count = document.getElementById('guestCount').value;
+    const phone = "87773491537"; // ОСЫ ЖЕРГЕ ӨЗ НӨМІРІҢІЗДІ ЖАЗЫҢЫЗ (8-сіз, тек 7-ден бастап)
+
+    if (!name) {
+        alert("Өтініш, есіміңізді жазыңыз!");
+        return;
+    }
+
+    const message = `Сәлеметсіз бе! Шұғыла анамыздың тойына жауап:%0A%0AАты: ${name}%0AАдам саны: ${count}%0AШешімі: ${status}`;
+    window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+}
+</script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000 });
+
+        // Мерейтой күні: 2026-03-21 19:00
+        const eventDate = new Date("Mar 21, 2026 19:00:00").getTime();
+
+        const timer = setInterval(() => {
+            const now = new Date().getTime();
+            const diff = eventDate - now;
+
+            if (diff < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown").innerHTML = "Қош келдіңіздер!";
+                return;
+            }
+
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById("days").innerText = d;
+            document.getElementById("hours").innerText = h;
+            document.getElementById("minutes").innerText = m;
+        }, 1000);
+    </script>
+</body>
+</html>
