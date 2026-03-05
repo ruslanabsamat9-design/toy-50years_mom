@@ -3,139 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Шұғыла 50 жас | Мерейтой</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:italic,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <title>Тойға шақырту | Шыңғысхан - Айжан</title>
     <style>
+        /* CSS СТИЛЬДЕРІ */
         body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Montserrat', sans-serif;
-            /* ЖАҢАРТЫЛҒАН ФОН: Ақ түс және алтын блесткалар суреті */
-            background-color: #ffffff;
-            background-image: url('https://img.freepik.com/free-vector/luxury-white-background-with-golden-glitter_23-2148823133.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* Скролл жасағанда фон қозғалмайды */
-            background-repeat: no-repeat;
-            color: #1d3557; /* Қою көк мәтін */
-            text-align: center;
-        }
-
-        .container {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            min-height: 100vh;
+            background-color: #fdfbf7;
+            font-family: 'Times New Roman', serif;
             display: flex;
-            flex-direction: column;
             justify-content: center;
-            /* Фон анық көрінуі үшін контейнерді мөлдір қылдық */
-            background: rgba(255, 255, 255, 0.5); 
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
         }
 
-        .header-img {
-            width: 80px;
-            margin-bottom: 20px;
+        .invitation-card {
+            background: white;
+            max-width: 450px;
+            width: 100%;
+            padding: 50px 30px;
+            text-align: center;
+            border: 1px solid #d4af37;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            position: relative;
+            /* Алтын ұшқындар стилі (background-image қосуға болады) */
+            background-image: radial-gradient(circle at top right, rgba(212, 175, 55, 0.1), transparent);
         }
 
-        .top-text {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 1.8rem;
+        .gold-text {
+            color: #b8860b;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 5px;
         }
 
-        .main-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            font-weight: 700;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            margin: 10px 0;
-            border-top: 1px solid #d4af37;
-            border-bottom: 1px solid #d4af37;
-            padding: 10px 0;
+        .blue-text {
+            color: #1a2a6c;
+            font-weight: bold;
         }
 
-        .invite-text {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.1rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #d4af37; /* Алтын түс */
-            margin-top: 40px;
-            font-weight: 600;
-        }
-
-        .details {
-            margin: 30px 0;
-            font-size: 1.1rem;
-            line-height: 2;
-        }
-
-        .btn-submit {
-            display: inline-block;
-            background-color: #1d3557;
-            color: white;
-            padding: 15px 60px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-
-        .btn-submit:hover {
-            background-color: #d4af37;
-            transform: scale(1.05);
-        }
-
-        .footer-text {
-            font-family: 'Playfair Display', serif;
+        h1 {
+            font-family: 'Georgia', serif;
+            font-size: 28px;
             font-style: italic;
-            font-size: 1.4rem;
-            margin-top: 50px;
+            color: #1a2a6c;
+            margin-bottom: 10px;
+        }
+
+        .intro {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 25px;
             line-height: 1.4;
         }
 
-        .venue-info {
+        .divider {
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #b8860b, transparent);
+            margin: 20px auto;
+        }
+
+        .couple-names {
+            font-size: 24px;
+            letter-spacing: 3px;
+            margin: 15px 0;
+        }
+
+        .calendar-title {
+            font-size: 20px;
+            margin-top: 30px;
+        }
+
+        /* Күнтізбе стилі */
+        .calendar-table {
+            width: 100%;
+            margin: 15px 0;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .calendar-table th {
+            padding-bottom: 10px;
+            color: #b8860b;
+        }
+
+        .calendar-table td {
+            padding: 8px 5px;
+        }
+
+        .highlight {
+            background-color: #b8860b;
+            color: white;
+            border-radius: 50%;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .time-box {
+            font-size: 18px;
+            margin: 15px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+        }
+
+        .address-box {
+            margin-top: 30px;
+            font-style: normal;
+            line-height: 1.6;
+        }
+
+        /* Форма стилі */
+        .rsvp-form {
+            margin-top: 40px;
+            text-align: left;
+            background: #fafafa;
+            padding: 25px;
+            border-radius: 5px;
+            border: 1px dashed #b8860b;
+        }
+
+        .rsvp-form label {
+            display: block;
+            margin-bottom: 8px;
             font-weight: bold;
-            color: #d4af37;
+            color: #1a2a6c;
+        }
+
+        .rsvp-form input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .radio-option {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+        }
+
+        .radio-option input {
+            margin-right: 10px;
+        }
+
+        .submit-btn {
+            background-color: #1a2a6c;
+            color: white;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 15px;
+        }
+
+        .submit-btn:hover {
+            background-color: #0d1a4a;
+        }
+
+        .footer-note {
+            margin-top: 40px;
+            font-style: italic;
+            color: #1a2a6c;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
 
-    <div class="container" data-aos="fade-up">
-        <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="icon" class="header-img">
+<div class="invitation-card">
+    <h1>Қос тойға шақырту</h1>
+    <p class="intro blue-text">Сіздерді әкеміз бен анамыздың алтын тойына шақырамыз!</p>
+    
+    <div class="divider"></div>
 
-        <div class="top-text">Мерейтой иесі:</div>
-        <div class="main-name">Шұғыла</div>
-
-        <div class="invite-text">
-            Тойға келуіңізді<br>растауыңызды сұраймыз!
-        </div>
-
-        <div class="details">
-            📅 21.03.2026 ж. Сағат 19:00<br>
-            📍 Шаян ауылы<br>
-            <span class="venue-info">"Қанағат" тойханасы</span>
-        </div>
-
-        <a href="СЕНІҢ_ФОРМА_СІЛТЕМЕСІ" class="btn-submit">Жіберу</a>
-
-        <div class="footer-text">
-            Келіңіздер, тойымыздың қадірлі қонағы болыңыздар!<br>
-            <br>
-            <small style="font-size: 1rem; font-family: 'Montserrat'">Альжановтар әулеті</small>
-        </div>
+    <div>
+        <p class="gold-text">Той иелері:</p>
+        <div class="couple-names blue-text">ШЫҢҒЫСХАН - АЙЖАН</div>
     </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1200 });
-    </script>
+    <div class="calendar-section">
+        <p class="gold-text calendar-title">Той салтанаты:</p>
+        <p class="blue-text" style="font-size: 1.2em;">23 НАУРЫЗ, 2026 ЖЫЛ</p>
+        
+        <table class="calendar-table">
+            <thead>
+                <tr>
+                    <th>ДС</th> <th>СС</th> <th>СР</th> <th>БС</th> <th>ЖМ</th> <th>СБ</th> <th>ЖС</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
+                <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+                <tr><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
+                <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td></tr>
+                <tr><td class="highlight">23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td></tr>
+                <tr><td>30</td><td>31</td><td></td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+        </table>
+        
+        <div class="time-box gold-text">САҒАТ 19:00-ДЕ</div>
+    </div>
+
+    <div class="address-box">
+        <p class="gold-text" style="font-size: 1.1em; font-weight: bold;">Мекен-жайымыз:</p>
+        <p class="blue-text">
+            ШЫМКЕНТ ҚАЛАСЫ,<br>
+            <strong>"GOLDEN HALL DAYANA"</strong><br>
+            МЕЙРАМХАНАСЫ,<br>
+            РАЙЫМБЕК Ж. КӨШЕСІ, 2
+        </p>
+    </div>
+
+    <div class="rsvp-form">
+        <p class="gold-text" style="font-size: 13px; text-align: center; margin-bottom: 20px;">
+            ТОЙҒА КЕЛУІҢІЗДІ РАСТАУЫҢЫЗДЫ СҰРАЙМЫЗ!
+        </p>
+        <form>
+            <label for="guest-name">Есіміңіз</label>
+            <input type="text" id="guest-name" placeholder="Аты-жөніңізді жазыңыз" required>
+
+            <label>Тойға келесіз бе?</label>
+            <div class="radio-option">
+                <input type="radio" name="status" id="yes" value="yes">
+                <label for="yes" style="font-weight: normal; margin: 0;">Иә, келемін</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" name="status" id="couple" value="couple">
+                <label for="couple" style="font-weight: normal; margin: 0;">Жұбайыммен келемін</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" name="status" id="no" value="no">
+                <label for="no" style="font-weight: normal; margin: 0;">Өкінішке орай, келе алмаймын</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Жіберу</button>
+        </form>
+    </div>
+
+    <p class="footer-note">Келіңіздер, тойымыздың қадірлі қонағы болыңыздар!</p>
+</div>
+
 </body>
 </html>
