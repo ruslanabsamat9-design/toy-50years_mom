@@ -1,277 +1,343 @@
 <!DOCTYPE html>
 <html lang="kk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Шұғыла Анамыздың 50 жас мерейтойы</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&family=Playfair+Display:italic,wght@0,700;1,700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <style>
-        :root {
-            --gold: #c5a059;
-            --dark-gold: #8e6d2d;
-            --bg: #fcfbf7;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Шұғыла Анамыздың 50 жас мерейтойы</title>
 
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg);
-            color: #333;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+<style>
 
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            margin: 10px 0;
-        }
+:root{
+--gold:#d4af37;
+--dark:#0a0a0a;
+}
 
-        .age-badge {
-            font-size: 1.2rem;
-            border: 2px solid var(--gold);
-            padding: 5px 25px;
-            border-radius: 50px;
-            margin-bottom: 20px;
-        }
+body{
+margin:0;
+font-family:Montserrat;
+background:#000;
+color:white;
+}
 
-        .timer {
-            display: flex;
-            gap: 10px;
-            margin-top: 30px;
-        }
+/* HERO */
 
-        .time-item {
-            background: rgba(255,255,255,0.15);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            padding: 10px;
-            border-radius: 10px;
-            min-width: 65px;
-            border: 1px solid rgba(255,255,255,0.3);
-        }
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+url("https://images.unsplash.com/photo-1519741497674-611481863552");
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
 
-        .invitation-card {
-            max-width: 600px;
-            margin: -60px auto 40px;
-            background: white;
-            padding: 40px 25px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            text-align: center;
-            position: relative;
-            z-index: 10;
-        }
+.hero h1{
+font-family:"Playfair Display";
+font-size:70px;
+color:var(--gold);
+margin:10px 0;
+}
 
-        .invitation-card h2 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 2.8rem;
-            color: var(--gold);
-            margin-bottom: 20px;
-        }
+.hero p{
+font-size:18px;
+opacity:.9;
+}
 
-        .divider {
-            width: 80px;
-            height: 2px;
-            background: var(--gold);
-            margin: 25px auto;
-            opacity: 0.4;
-        }
+.age{
+border:2px solid var(--gold);
+padding:8px 30px;
+border-radius:40px;
+color:var(--gold);
+margin-bottom:15px;
+}
 
-        .info-row {
-            margin: 20px 0;
-        }
+/* TIMER */
 
-        .info-row strong {
-            display: block;
-            color: var(--dark-gold);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.85rem;
-            margin-bottom: 5px;
-        }
+.timer{
+display:flex;
+gap:15px;
+margin-top:30px;
+}
 
-        /* RSVP Form Style */
-        .rsvp-form {
-            background: #fdfaf4;
-            padding: 25px;
-            border-radius: 15px;
-            margin-top: 30px;
-            border: 1px solid #eee;
-        }
+.time{
+border:1px solid rgba(212,175,55,.4);
+padding:15px;
+border-radius:10px;
+background:rgba(0,0,0,.6);
+min-width:80px;
+}
 
-        input, select {
-            width: 100%;
-            padding: 12px;
-            margin: 8px 0 18px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            box-sizing: border-box;
-        }
+.time span{
+display:block;
+font-size:26px;
+color:var(--gold);
+font-weight:700;
+}
 
-        .btn-group {
-            display: flex;
-            gap: 10px;
-        }
+/* CARD */
 
-        .btn {
-            flex: 1;
-            padding: 15px;
-            border: none;
-            border-radius: 8px;
-            color: white;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.3s;
-            font-size: 0.9rem;
-            -webkit-appearance: none;
-        }
+.card{
+max-width:650px;
+margin:-80px auto 40px;
+background:rgba(20,20,20,.9);
+backdrop-filter:blur(12px);
+border:1px solid rgba(212,175,55,.4);
+border-radius:20px;
+padding:45px 30px;
+box-shadow:0 0 40px rgba(212,175,55,.2);
+text-align:center;
+}
 
-        .btn-yes { background: #28a745; }
-        .btn-no { background: #dc3545; }
-        .btn-map { 
-            display: block;
-            background: var(--gold);
-            color: white;
-            text-decoration: none;
-            padding: 12px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
+.card h2{
+font-family:"Dancing Script";
+font-size:40px;
+color:var(--gold);
+margin-bottom:10px;
+}
 
-        footer {
-            text-align: center;
-            padding-bottom: 40px;
-            color: #999;
-            font-size: 0.8rem;
-        }
+.divider{
+width:80px;
+height:2px;
+background:var(--gold);
+margin:25px auto;
+opacity:.4;
+}
 
-        @media (max-width: 480px) {
-            .hero h1 { font-size: 2.5rem; }
-            .invitation-card { width: 90%; margin-top: -80px; }
-        }
-    </style>
+.info{
+margin:20px 0;
+}
+
+.info strong{
+display:block;
+font-size:13px;
+letter-spacing:1px;
+color:var(--gold);
+margin-bottom:5px;
+}
+
+/* MAP BUTTON */
+
+.map{
+display:block;
+background:var(--gold);
+color:black;
+padding:12px;
+border-radius:8px;
+text-decoration:none;
+margin-top:15px;
+font-weight:600;
+}
+
+/* RSVP */
+
+.rsvp{
+background:#111;
+border:1px solid rgba(212,175,55,.3);
+padding:25px;
+border-radius:15px;
+margin-top:30px;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin:10px 0 20px;
+border-radius:8px;
+border:1px solid #333;
+background:#000;
+color:white;
+}
+
+.buttons{
+display:flex;
+gap:10px;
+}
+
+.btn{
+flex:1;
+padding:15px;
+border-radius:8px;
+border:1px solid var(--gold);
+background:transparent;
+color:var(--gold);
+cursor:pointer;
+font-weight:600;
+}
+
+.btn:hover{
+background:var(--gold);
+color:black;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+color:#888;
+padding:40px 0;
+font-size:13px;
+}
+
+@media(max-width:480px){
+
+.hero h1{
+font-size:45px;
+}
+
+.card{
+width:90%;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-    <section class="hero">
-        <div data-aos="fade-down" class="age-badge">Мерейтой 50 жас</div>
-        <h1 data-aos="zoom-in">Шұғыла</h1>
-        <p data-aos="fade-up">Аяулы анамыздың мерейлі мерекесіне шақырамыз!</p>
-        
-        <div class="timer" id="countdown">
-            <div class="time-item"><span id="days" style="display:block; font-size: 1.3rem; font-weight: 700;">00</span>күн</div>
-            <div class="time-item"><span id="hours" style="display:block; font-size: 1.3rem; font-weight: 700;">00</span>сағат</div>
-            <div class="time-item"><span id="minutes" style="display:block; font-size: 1.3rem; font-weight: 700;">00</span>мин</div>
-        </div>
-    </section>
+<section class="hero">
 
-    <div class="invitation-card" data-aos="fade-up">
-        <h2>Құрметті қонақтар!</h2>
-        <p>Әулетіміздің берекесі, асыл анамыз <strong>Шұғыланың</strong> 50 жасқа толған мерейтойының қадірлі қонағы болуға шақырамыз!</p>
-        
-        <div class="divider"></div>
+<div class="age">50 жас мерейтой</div>
 
-        <div class="info-row">
-            <strong>Күні мен уақыты</strong>
-            21 Наурыз, 2026 жыл | Сағат 19:00
-        </div>
+<h1>Шұғыла</h1>
 
-        <div class="info-row">
-            <strong>Мекенжайы</strong>
-            Шаян ауылы, "Қанағат" тойханасы
-        </div>
+<p>Аяулы анамыздың мерейлі мерекесіне шақырамыз</p>
 
-        <a href="https://maps.google.com/?q=Қанағат+тойханасы+Шаян" target="_blank" class="btn-map">📍 Картадан көру</a>
+<div class="timer">
 
-        <div class="rsvp-form">
-            <h3 style="font-family: 'Playfair Display', serif; margin-top: 0;">Жауабыңызды күтеміз</h3>
-            
-            <div style="text-align: left;">
-                <label style="font-size: 0.8rem; font-weight: 600;">Аты-жөніңіз:</label>
-                <input type="text" id="guestName" placeholder="Мысалы: Асхат және отбасы">
-                
-                <label style="font-size: 0.8rem; font-weight: 600;">Адам саны:</label>
-                <select id="guestCount">
-                    <option value="1">1 адам</option>
-                    <option value="2">2 адам</option>
-                    <option value="3">3 адам</option>
-                    <option value="4">4 адам</option>
-                    <option value="5+">5+ адам</option>
-                </select>
-            </div>
+<div class="time">
+<span id="days">00</span>
+күн
+</div>
 
-            <div class="btn-group">
-                <button class="btn btn-yes" onclick="sendRSVP('Иә, әрине келеміз!')">Келемін ✅</button>
-                <button class="btn btn-no" onclick="sendRSVP('Өкінішке орай, келе алмаймыз')">Келе алмаймын ❌</button>
-            </div>
-        </div>
+<div class="time">
+<span id="hours">00</span>
+сағат
+</div>
 
-        <div style="margin-top: 30px; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem;">
-            Альжановтар әулеті
-        </div>
-    </div>
+<div class="time">
+<span id="minutes">00</span>
+мин
+</div>
 
-    <footer>Created by AITU Student</footer>
+</div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
+</section>
 
-        // Timer Logic
-        const eventDate = new Date("Mar 21, 2026 19:00:00").getTime();
-        setInterval(() => {
-            const now = new Date().getTime();
-            const diff = eventDate - now;
-            if (diff < 0) return;
+<div class="card">
 
-            document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
-            document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById("minutes").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        }, 1000);
+<h2>Құрметті қонақтар!</h2>
 
-        // RSVP Logic - Кез келген браузерге арналған түзету
-        function sendRSVP(status) {
-            const name = document.getElementById('guestName').value.trim();
-            const count = document.getElementById('guestCount').value;
-            const phone = "77773491537"; // ОСЫ ЖЕРГЕ НӨМІРІҢІЗДІ ЖАЗЫҢЫЗ
+<p>
+Әулетіміздің берекесі, асыл анамыз
+<strong>Шұғыланың</strong> 50 жасқа толған
+мерейтойының қадірлі қонағы болуға шақырамыз
+</p>
 
-            if (!name) {
-                alert("Өтініш, есіміңізді жазыңыз!");
-                return;
-            }
+<div class="divider"></div>
 
-            const text = "Сәлеметсіз бе! Шұғыла анамыздың тойына жауап:\n\n" +
-                         "👤 Аты: " + name + "\n" +
-                         "👨‍👩‍👧‍👦 Адам саны: " + count + "\n" +
-                         "💬 Шешімі: " + status;
+<div class="info">
+<strong>Күні мен уақыты</strong>
+21 Наурыз 2026 | 19:00
+</div>
 
-            const encodedText = encodeURIComponent(text);
-           const whatsappUrl = "https://wa.me/" + phone + "?text=" + encodedText;
+<div class="info">
+<strong>Мекенжайы</strong>
+Шаян ауылы — Қанағат тойханасы
+</div>
 
-            // Телефонда және ноутбукта бірдей жұмыс істеу үшін
-            window.location.href = whatsappUrl;
-        }
-    </script>
+<a class="map" href="https://maps.google.com/?q=Қанағат+тойханасы+Шаян" target="_blank">
+📍 Картадан көру
+</a>
+
+<div class="rsvp">
+
+<h3>Жауабыңызды күтеміз</h3>
+
+<input id="name" placeholder="Аты-жөніңіз">
+
+<select id="count">
+<option>1 адам</option>
+<option>2 адам</option>
+<option>3 адам</option>
+<option>4 адам</option>
+<option>5+ адам</option>
+</select>
+
+<div class="buttons">
+
+<button class="btn" onclick="send('Келеміз')">
+Келеміз
+</button>
+
+<button class="btn" onclick="send('Келе алмаймыз')">
+Келе алмаймыз
+</button>
+
+</div>
+
+</div>
+
+<p style="margin-top:30px;font-style:italic">
+Альжановтар әулеті
+</p>
+
+</div>
+
+<footer>
+Created by AITU Student
+</footer>
+
+<script>
+
+const date=new Date("Mar 21, 2026 19:00:00").getTime()
+
+setInterval(()=>{
+
+const now=new Date().getTime()
+
+const diff=date-now
+
+if(diff<0)return
+
+document.getElementById("days").innerText=Math.floor(diff/(1000*60*60*24))
+document.getElementById("hours").innerText=Math.floor((diff%(1000*60*60*24))/(1000*60*60))
+document.getElementById("minutes").innerText=Math.floor((diff%(1000*60*60))/(1000*60))
+
+},1000)
+
+
+function send(status){
+
+const name=document.getElementById("name").value
+const count=document.getElementById("count").value
+const phone="77773491537"
+
+if(!name){
+
+alert("Атыңызды жазыңыз")
+
+return
+}
+
+const text=
+"Сәлеметсіз бе! Шұғыла анамыздың тойына жауап:\n\n"+
+"Аты: "+name+"\n"+
+"Адам саны: "+count+"\n"+
+"Жауап: "+status
+
+window.location.href="https://wa.me/"+phone+"?text="+encodeURIComponent(text)
+
+}
+
+</script>
+
 </body>
 </html>
