@@ -212,7 +212,7 @@
 </head>
 <body>
 
-<audio id="bgMusic" loop>
+<audio id="bgMusic" loop autoplay preload="auto">
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
@@ -250,7 +250,7 @@
         Шаян ауылы — Қанағат тойханасы
     </div>
 
-    <a class="map" href="https://www.google.com/maps" target="_blank">📍 Картадан көру</a>
+    <a class="map" href="https://maps.google.com" target="_blank">📍 Картадан көру</a>
 
     <div class="rsvp">
         <h3 style="font-family: Montserrat; color: var(--gold);">Жауабыңызды күтеміз</h3>
@@ -279,7 +279,7 @@
         }
     }, 1000);
 
-    // МУЗЫКА ФУНКЦИЯЛАРЫ
+    // МУЗЫКА БАСҚАРУ
     const music = document.getElementById("bgMusic");
     const musicBtn = document.getElementById("musicToggle");
 
@@ -293,13 +293,19 @@
         }
     }
 
-    // Экранды бірінші рет басқанда музыканы қосу (Браузер шектеуі үшін)
-    document.addEventListener('click', () => {
-        if (music.paused) {
-            music.play();
+    // БРАУЗЕР ШЕКТЕУІН АЙНАЛЫП ӨТУ ФУНКЦИЯСЫ
+    const autoPlayMusic = () => {
+        music.play().then(() => {
             musicBtn.innerText = "⏸️";
-        }
-    }, { once: true });
+        }).catch(() => {
+            console.log("Авто ойнату әлі бұғаттаулы");
+        });
+    };
+
+    // Қолданушы экранға тисе немесе парақшаны жылжытса музыканы қосу
+    document.addEventListener('click', autoPlayMusic, { once: true });
+    document.addEventListener('scroll', autoPlayMusic, { once: true });
+    document.addEventListener('touchstart', autoPlayMusic, { once: true });
 
     // WHATSAPP ЖІБЕРУ
     function sendWhatsApp(status) {
@@ -319,5 +325,3 @@
 
 </body>
 </html>
-
-
