@@ -3,132 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Шұғыла 50 жас | Мерейтой</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:italic,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Шұғыла Анамыздың 50 жас мерейтойы</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&family=Playfair+Display:italic,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Montserrat', sans-serif;
-            /* Скриншоттағыдай алтын ұшқындары бар ақ фон */
-            background-color: #ffffff;
-            background-image: url('https://www.transparenttextures.com/patterns/white-diamond.png'), 
-                              url('https://img.freepik.com/free-vector/luxury-white-background-with-golden-glitter_23-2148823133.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-            color: #1d3557;
-            text-align: center;
+        :root {
+            --gold: #c5a059;
+            --dark-gold: #8e6d2d;
+            --bg: #fcfbf7;
         }
 
-        .container {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            min-height: 100vh;
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Шапка / Hero */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            background: rgba(255, 255, 255, 0.8); /* Мәтін жақсы оқылуы үшін */
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
         }
 
-        .header-img {
-            width: 80px;
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        .age-badge {
+            font-size: 1.5rem;
+            border: 2px solid var(--gold);
+            padding: 5px 25px;
+            border-radius: 50px;
             margin-bottom: 20px;
         }
 
-        .top-text {
+        /* Таймер */
+        .timer {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .time-item {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            border-radius: 10px;
+            min-width: 70px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* Негізгі блок */
+        .invitation-card {
+            max-width: 700px;
+            margin: -50px auto 50px;
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        .invitation-card h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 30px;
+        }
+
+        .info-row {
+            margin: 25px 0;
+            font-size: 1.1rem;
+        }
+
+        .info-row strong {
+            display: block;
+            color: var(--dark-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+        }
+
+        .divider {
+            width: 100px;
+            height: 2px;
+            background: var(--gold);
+            margin: 30px auto;
+            opacity: 0.5;
+        }
+
+        .family-name {
             font-family: 'Playfair Display', serif;
             font-style: italic;
-            font-size: 1.8rem;
-            margin-bottom: 5px;
-        }
-
-        .main-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            font-weight: 700;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            margin: 10px 0;
-            border-top: 1px solid #d4af37;
-            border-bottom: 1px solid #d4af37;
-            padding: 10px 0;
-        }
-
-        .invite-text {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.1rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #d4af37;
+            font-size: 1.5rem;
             margin-top: 40px;
-            font-weight: 600;
         }
 
-        .details {
-            margin: 30px 0;
-            font-size: 1.1rem;
-            line-height: 2;
-        }
-
-        .btn-submit {
+        .btn-map {
             display: inline-block;
-            background-color: #1d3557;
+            background: var(--gold);
             color: white;
-            padding: 15px 60px;
+            padding: 15px 35px;
             text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            margin-top: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
             transition: 0.3s;
         }
 
-        .footer-text {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 1.4rem;
-            margin-top: 50px;
-            line-height: 1.4;
+        .btn-map:hover {
+            background: var(--dark-gold);
         }
 
-        .venue-info {
-            font-weight: bold;
-            color: #d4af37;
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.5rem; }
+            .invitation-card { padding: 30px 20px; width: 85%; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container" data-aos="fade-up">
-        <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="icon" class="header-img">
+    <section class="hero">
+        <div data-aos="fade-down" class="age-badge">Мерейтой 50 жас</div>
+        <h1 data-aos="zoom-in">Шұғыла</h1>
+        <p data-aos="fade-up">Аяулы анамыздың мерейлі мерекесіне шақырамыз!</p>
+        
+        <div class="timer" id="countdown">
+            <div class="time-item"><span id="days" style="display:block; font-size: 1.5rem; font-weight: bold;">00</span>күн</div>
+            <div class="time-item"><span id="hours" style="display:block; font-size: 1.5rem; font-weight: bold;">00</span>сағат</div>
+            <div class="time-item"><span id="minutes" style="display:block; font-size: 1.5rem; font-weight: bold;">00</span>мин</div>
+        </div>
+    </section>
 
-        <div class="top-text">Мерейтой иесі:</div>
-        <div class="main-name">Шұғыла</div>
+    <div class="invitation-card" data-aos="fade-up">
+        <h2>Құрметті қонақтар!</h2>
+        <p>Әулетіміздің берекесі, асыл анамыз <strong>Шұғыланың</strong> 50 жасқа толған мерейтойының қадірлі қонағы болуға шақырамыз!</p>
+        
+        <div class="divider"></div>
 
-        <div class="invite-text">
-            Тойға келуіңізді<br>растауыңызды сұраймыз!
+        <div class="info-row">
+            <strong>Күні мен уақыты</strong>
+            21 Наурыз, 2026 жыл | Сағат 19:00
         </div>
 
-        <div class="details">
-            📅 21.03.2026 ж. Сағат 19:00<br>
-            📍 Шаян ауылы<br>
-            <span class="venue-info">"Қанағат" тойханасы</span>
+        <div class="info-row">
+            <strong>Мекенжайы</strong>
+            Шаян ауылы, "Қанағат" тойханасы
         </div>
 
-        <a href="СЕНІҢ_ФОРМА_СІЛТЕМЕСІ" class="btn-submit">Жіберу</a>
+        <div class="divider"></div>
 
-        <div class="footer-text">
-            Келіңіздер, тойымыздың қадірлі қонағы болыңыздар!<br>
-            <br>
-            <small style="font-size: 1rem; font-family: 'Montserrat'">Альжановтар әулеті</small>
+        <div class="family-name">
+            Альжановтар әулеті
         </div>
+
+        <a href="https://www.google.com/maps/search/Шаян+Қанағат+тойханасы" target="_blank" class="btn-map">📍 Картадан көру</a>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1200 });
+        AOS.init({ duration: 1000 });
+
+        // Мерейтой күні: 2026-03-21 19:00
+        const eventDate = new Date("Mar 21, 2026 19:00:00").getTime();
+
+        const timer = setInterval(() => {
+            const now = new Date().getTime();
+            const diff = eventDate - now;
+
+            if (diff < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown").innerHTML = "Қош келдіңіздер!";
+                return;
+            }
+
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById("days").innerText = d;
+            document.getElementById("hours").innerText = h;
+            document.getElementById("minutes").innerText = m;
+        }, 1000);
     </script>
 </body>
 </html>
