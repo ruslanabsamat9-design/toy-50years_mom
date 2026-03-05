@@ -8,23 +8,23 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         :root { --gold: #c5a059; --bg: #fcfbf7; }
-        body { margin: 0; font-family: 'Montserrat', sans-serif; background: var(--bg); text-align: center; }
+        body { margin: 0; font-family: 'Montserrat', sans-serif; background: var(--bg); text-align: center; color: #333; }
         .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1350&q=80') center/cover; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; }
         .invitation-card { max-width: 600px; margin: -60px auto 40px; background: white; padding: 40px 20px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); position: relative; z-index: 10; }
         .rsvp-form { background: #fdfaf4; padding: 20px; border-radius: 15px; margin-top: 20px; border: 1px solid #eee; }
-        input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; }
-        .btn-submit { width: 100%; padding: 15px; border: none; border-radius: 8px; color: white; background: #28a745; font-weight: 600; cursor: pointer; }
-        #success-message { display: none; padding: 20px; color: #28a745; border: 2px solid #28a745; border-radius: 10px; }
+        input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; font-size: 1rem; }
+        .btn-submit { width: 100%; padding: 15px; border: none; border-radius: 8px; color: white; background: #28a745; font-weight: 600; cursor: pointer; font-size: 1rem; }
+        #success-message { display: none; padding: 20px; color: #28a745; border: 2px solid #28a745; border-radius: 10px; background: #f0fff4; }
     </style>
 </head>
 <body>
     <section class="hero">
-        <h1 data-aos="zoom-in" style="font-size: 3.5rem; font-family: 'Playfair Display', serif;">Шұғыла</h1>
-        <p>Аяулы анамыздың 50 жас мерейтойына шақырамыз!</p>
+        <h1 data-aos="zoom-in" style="font-size: 3.5rem; font-family: 'Playfair Display', serif; margin: 0;">Шұғыла</h1>
+        <p data-aos="fade-up">Аяулы анамыздың 50 жас мерейтойына шақырамыз!</p>
     </section>
 
     <div class="invitation-card" data-aos="fade-up">
-        <h2>Құрметті қонақтар!</h2>
+        <h2 style="font-family: 'Dancing Script', cursive; font-size: 2.5rem; color: var(--gold);">Құрметті қонақтар!</h2>
         <p>21 Наурыз, 2026 жыл | Сағат 19:00</p>
         <p>Шаян ауылы, "Қанағат" тойханасы</p>
 
@@ -32,7 +32,9 @@
             <form action="https://docs.google.com/forms/d/e/1FAIpQLSdh0wkgRTGWYx7aCimsKXwDwfSOiIyJpjQMHBGJDGmjmfv6Cg/formResponse" method="POST" target="hidden_iframe" onsubmit="return handleFormSubmit();">
                 <input type="text" name="entry.1290305503" id="guestName" required placeholder="Аты-жөніңіз">
                 <select name="entry.884702377">
-                    <option value="1">1 адам</option><option value="2">2 адам</option><option value="3+">3+ адам</option>
+                    <option value="1">1 адам</option>
+                    <option value="2">2 адам</option>
+                    <option value="3+">3+ адам</option>
                 </select>
                 <select name="entry.1791346714">
                     <option value="Келемін">Келемін ✅</option>
@@ -48,9 +50,15 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({ duration: 1000, once: true });
+        
         let isSubmitted = false;
-        function handleFormSubmit() { isSubmitted = true; return true; }
+        function handleFormSubmit() {
+            const name = document.getElementById('guestName').value.trim();
+            if(!name) return false;
+            isSubmitted = true;
+            return true;
+        }
         function onFormLoad() {
             if (isSubmitted) {
                 document.getElementById('rsvp-container').style.display = 'none';
