@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Шұғыла Анамыздың 50 жас мерейтойы</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Parisienne&family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
---gold:#c9a227;
---lightgold:#e8d9a5;
+--gold:#caa74a;
+--lightgold:#f4e7c5;
 --bg:#ffffff;
 }
 
@@ -20,7 +20,6 @@ margin:0;
 background:var(--bg);
 font-family:"Cormorant Garamond",serif;
 color:#444;
-line-height:1.6;
 }
 
 /* HERO */
@@ -30,8 +29,8 @@ line-height:1.6;
 height:90vh;
 
 background:
-linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.9)),
-url("https://images.unsplash.com/photo-1519225421980-715cb0215aed");
+linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.9)),
+url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622");
 
 background-size:cover;
 background-position:center;
@@ -43,6 +42,7 @@ align-items:center;
 
 text-align:center;
 padding:20px;
+
 }
 
 .age{
@@ -50,20 +50,18 @@ padding:20px;
 border:1px solid var(--gold);
 padding:8px 30px;
 border-radius:40px;
-
 color:var(--gold);
-
+font-family:Montserrat;
 letter-spacing:2px;
-
-font-size:14px;
+font-size:13px;
 
 }
 
 .hero h1{
 
-font-family:"Great Vibes",cursive;
+font-family:"Cinzel Decorative";
 
-font-size:90px;
+font-size:80px;
 
 color:var(--gold);
 
@@ -73,11 +71,13 @@ margin:10px 0;
 
 .hero p{
 
-font-family:Montserrat;
+font-family:"Parisienne";
 
-font-size:18px;
+font-size:32px;
 
-color:#666;
+color:#555;
+
+margin:0;
 
 }
 
@@ -125,13 +125,13 @@ font-weight:700;
 
 .card{
 
-max-width:650px;
+max-width:700px;
 
 margin:-70px auto 40px;
 
 background:white;
 
-padding:45px 30px;
+padding:50px 35px;
 
 border-radius:18px;
 
@@ -139,13 +139,41 @@ box-shadow:0 20px 40px rgba(0,0,0,0.08);
 
 text-align:center;
 
+position:relative;
+
 }
+
+/* GOLD FRAME */
+
+.card:before{
+
+content:"";
+
+position:absolute;
+
+top:15px;
+
+left:15px;
+
+right:15px;
+
+bottom:15px;
+
+border:1px solid var(--gold);
+
+border-radius:12px;
+
+pointer-events:none;
+
+}
+
+/* TITLE */
 
 .card h2{
 
-font-family:"Great Vibes";
+font-family:"Parisienne";
 
-font-size:48px;
+font-size:46px;
 
 color:var(--gold);
 
@@ -153,9 +181,11 @@ margin-bottom:10px;
 
 }
 
+/* DIVIDER */
+
 .divider{
 
-width:80px;
+width:90px;
 
 height:2px;
 
@@ -163,15 +193,15 @@ background:var(--gold);
 
 margin:25px auto;
 
-opacity:.4;
-
 }
+
+/* INFO */
 
 .info{
 
 margin:20px 0;
 
-font-size:18px;
+font-size:20px;
 
 }
 
@@ -187,29 +217,29 @@ letter-spacing:2px;
 
 color:var(--gold);
 
-margin-bottom:5px;
+margin-bottom:6px;
 
 }
 
-/* MAP BUTTON */
+/* MAP */
 
 .map{
 
-display:block;
+display:inline-block;
 
 background:var(--gold);
 
 color:white;
 
-padding:12px;
+padding:12px 20px;
 
 border-radius:8px;
 
 text-decoration:none;
 
-margin-top:15px;
-
 font-family:Montserrat;
+
+margin-top:15px;
 
 }
 
@@ -217,13 +247,13 @@ font-family:Montserrat;
 
 .rsvp{
 
+margin-top:30px;
+
 background:#faf9f6;
 
-padding:25px;
+padding:30px;
 
-border-radius:15px;
-
-margin-top:30px;
+border-radius:12px;
 
 border:1px solid #eee;
 
@@ -233,21 +263,21 @@ border:1px solid #eee;
 
 font-family:"Cormorant Garamond";
 
-font-size:26px;
-
-margin-top:0;
+font-size:28px;
 
 color:var(--gold);
 
+margin-top:0;
+
 }
 
-input,select{
+input{
 
 width:100%;
 
 padding:12px;
 
-margin:10px 0 20px;
+margin:12px 0 20px;
 
 border-radius:8px;
 
@@ -257,17 +287,19 @@ font-family:Montserrat;
 
 }
 
+/* BUTTONS */
+
 .buttons{
 
 display:flex;
+
+flex-direction:column;
 
 gap:10px;
 
 }
 
 .btn{
-
-flex:1;
 
 padding:14px;
 
@@ -303,7 +335,7 @@ footer{
 
 text-align:center;
 
-padding:40px 0;
+padding:40px;
 
 font-family:Montserrat;
 
@@ -319,7 +351,13 @@ color:#999;
 
 .hero h1{
 
-font-size:60px;
+font-size:55px;
+
+}
+
+.hero p{
+
+font-size:24px;
 
 }
 
@@ -332,6 +370,7 @@ width:90%;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -369,13 +408,13 @@ width:90%;
 
 <h2>Құрметті қонақтар!</h2>
 
-<p>
+<p style="font-size:20px">
 
 Әулетіміздің берекесі, асыл анамыз
 
 <strong>Шұғыланың</strong>
 
-50 жасқа толған мерейтойының
+50 жас мерейтойының
 
 қадірлі қонағы болуға шақырамыз
 
@@ -411,30 +450,37 @@ width:90%;
 
 <input id="name" placeholder="Аты-жөніңіз">
 
-
 <div class="buttons">
 
-<button class="btn" onclick="send('Келеміз')">
-Иә,әрине келеміз
+<button class="btn" onclick="send('Өзім барамын')">
+Өзім барамын
 </button>
 
-<button class="btn" onclick="send('Келе алмаймыз')">
-Өкінішке орай бара алмаймыз
+<button class="btn" onclick="send('Жұбайыммен бірге барамын')">
+Жұбайыммен бірге барамын
+</button>
+
+<button class="btn" onclick="send('Келе алмаймын')">
+Келе алмаймын
 </button>
 
 </div>
 
 </div>
 
-<p style="margin-top:30px;font-style:italic">
+<p style="margin-top:30px;font-style:italic;font-size:20px">
 
-Альжановтар әулеті!
-Тойымыздың құрметті қонағы болыңыздар!
+Альжановтар әулеті
 
 </p>
 
 </div>
 
+<footer>
+
+Created by AITU Student
+
+</footer>
 
 <script>
 
@@ -460,13 +506,11 @@ function send(status){
 
 const name=document.getElementById("name").value
 
-const count=document.getElementById("count").value
-
 const phone="77773491537"
 
 if(!name){
 
-alert("Атыңызды жазыңыз:")
+alert("Атыңызды жазыңыз")
 
 return
 
@@ -477,8 +521,6 @@ const text=
 "Сәлеметсіз бе! Шұғыла анамыздың тойына жауап:\n\n"+
 
 "Аты: "+name+"\n"+
-
-"Адам саны: "+count+"\n"+
 
 "Жауап: "+status
 
